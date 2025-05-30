@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color : white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Empile verticalement */
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px;
+    transition: padding 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+.navbar.compact {
+    padding: 8px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espace sous le logo */
+    margin-right: 0; /* Plus besoin de marge à droite */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+
+body {
+    padding-top: 130px; /* Pour éviter que le contenu passe sous la navbar */
+}

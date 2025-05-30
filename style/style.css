@@ -1,57 +1,67 @@
 body {
-    background-color: black;
+    background-color: rgb(19, 17, 17);
     margin: 0;
     padding: 0;
     color : white;
+    font-family: "Nunito", sans-serif;
 }
 
-.navbar {
+header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #222;
-    color: #fff;
+    background-image: url('/img/fond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column; /* Empile verticalement */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 40px;
+    padding-top: 10px;
     transition: padding 0.3s, box-shadow 0.3s;
-    z-index: 1000;
-    box-shadow: none;
+    font-size: 1.2em;
+    color: #ffce5e;
 }
 
-.navbar.compact {
-    padding: 8px 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.logo {
-    font-size: 1.5em;
+#logo {
     font-weight: bold;
     margin-bottom: 10px; /* Espace sous le logo */
     margin-right: 0; /* Plus besoin de marge à droite */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 100px;
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    margin: 0;
-    margin-top: 50px;
-    padding: 0;
+header img {
+    width: 10em;
+    border-radius: 100%;
 }
 
-.nav-links a {
+#menu {
+    width: 100%;
+    background-color: #ffce5e;
+    justify-items: center;
+    padding: 30px;
+}
+
+#menu.compact {
+    padding: 8px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#menu {
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.2s;
+    background-color: #002654;
+    text-align: center;
+    padding: 10px;
 }
 
-.nav-links a:hover {
-    color: #00bfff;
+#menu ul {
+    padding: 0px; /* Aucun espace en plus de la liste (intérieur et extérieur) */ 
+    margin: 0px;
+}
+
+#menu li{
+    display: inline-block; /* Blocs qui se suivent en ligne */
+    margin: 50px 0px; /* Un espace de 50px entre chaque puce/bouton */
 }
 
 body {

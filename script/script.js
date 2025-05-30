@@ -1,8 +1,8 @@
 window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 30) {
-        navbar.classList.add('compact');
+    const header = document.querySelector('#menu');
+    if (window.scrollY > 350) {
+        header.classList.add('compact');
     } else {
-        navbar.classList.remove('compact');
+        header.classList.remove('compact');
     }
 });

@@ -1,0 +1,12 @@
+footer {
+    bottom: 0;
+    width: 100%;
+    background-image: url('/img/fond.png');
+    color: #ffce5e;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #ffce5e;
+}

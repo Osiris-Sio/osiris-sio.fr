@@ -7,7 +7,7 @@ fetch('/page/footer.html')
 
 window.addEventListener('scroll', function() {
     const header = document.querySelector('#menu');
-    if (window.scrollY > 500) {
+    if (window.scrollY > 425) {
         header.classList.add('compact');
     } else {
         header.classList.remove('compact');

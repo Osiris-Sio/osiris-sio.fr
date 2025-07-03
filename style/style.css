@@ -21,7 +21,7 @@ body {
 article p{
     text-align: left;
     font-size: 20px; 
-    border-left: var(--jaune) 3px solid;
+    border-left: var(--jaune-clair) 3px solid;
     margin-left: 60px;
     padding: 0px 20px;
 }
@@ -32,6 +32,10 @@ article img {
     border-radius: 10px;
     margin: 20px 0;
     border: var(--jaune) 2px solid;
+}
+
+.fond-logo {
+    width: 50%;
 }
 
 article h2{
@@ -45,7 +49,7 @@ iframe {
 }
 
 /* ----- Responsive ----- */
-@media (max-width: 800px) {
+@media (max-width: 880px) {
 
     article h2{
         font-size: 28px;

@@ -1,0 +1,56 @@
+:root {
+    --bleu: #001A46;
+    --bleu-clair: #007BFF;
+    --jaune: #FFD100;
+    --jaune-clair: #FFFA8C;
+    --blanc: #ffffff;
+    --gris-fonce: #23272a;
+    --gris: #444647;
+}
+
+.carrousel-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--gris);
+  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  padding: 20px 0;
+}
+
+.carrousel-slider {
+  display: flex;
+  gap: 30px;
+  animation: defilement 30s linear infinite;
+}
+
+.carrousel-slider img {
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s;
+}
+
+.carrousel-slider img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 880px) {
+    
+    @keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+}

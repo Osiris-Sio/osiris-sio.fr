@@ -49,3 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
+
+function copierEmail() {
+    const email = "osiris62100@hotmail.fr";
+    navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById("email-toast");
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2500);
+    });
+}
+

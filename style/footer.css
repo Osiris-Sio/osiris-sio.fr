@@ -1,12 +1,23 @@
+:root {
+    --bleu-fonce: #001a46;
+    --bleu-clair: #007BFF;
+    --jaune: #ffd100;
+    --jaune-clair: #FFFA8C;
+    --blanc: #ffffff;
+    --noir: #000000;
+    --transition: 0.3s ease-in-out;
+}
+
 footer {
+    font-family: 'Nunito', sans-serif;
     bottom: 0;
     width: 100%;
-    background-image: url('/img/fond.png');
-    color: #ffce5e;
+    background: linear-gradient(180deg, var(--bleu-fonce) 0%, var(--bleu-clair) 100%);
+    color: var(--jaune);
     text-align: center;
     padding: 10px 0;
 }
 
 footer a {
-    color: #ffce5e;
+    color: var(--jaune);
 }

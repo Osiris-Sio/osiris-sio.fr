@@ -27,10 +27,11 @@ article p{
 }
 
 article img {
-    width: 50%;
+    width: 25%;
     height: auto;
     border-radius: 10px;
     margin: 20px 0;
+    border: var(--jaune) 2px solid;
 }
 
 article h2{
@@ -38,11 +39,13 @@ article h2{
     font-size: 42px;
 }
 
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
 /* ----- Responsive ----- */
-@media (max-width: 880px) {
-    body {
-        margin-top: 150px;
-    }
+@media (max-width: 800px) {
 
     article h2{
         font-size: 28px;
@@ -50,8 +53,17 @@ article h2{
 
     article p{
         font-size: 18px; 
-        margin-left: 30px;
+        margin-left: 5px;
         padding-left: 10px;
     }
+
+    article img {
+        width: 50%;
+    }
+
+    iframe {
+    width: 320px;
+    height: 180px;
+}
 
 }

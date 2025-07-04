@@ -40,7 +40,8 @@ article img {
 
 article h2{
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
+    margin: 90px 0 50px 20px;
 }
 
 iframe {

@@ -16,17 +16,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 6em;
+    overflow: hidden;
+    margin: 0px 50px;
+}
+
+.communication a{
+    display: block;
+    width: 20%;
 }
 
 .communication img {
-    width: 75%;
+    width: 97%;
+    height: auto;
+    display: block;
     transition: transform 0.3s ease-in-out;
 }
 
 .communication img:hover {
+    border-color: var(--jaune-clair);
     transform: scale(1.05);
     cursor: pointer;
 }
+
 
 .email-icon-wrapper {
     position: relative;
@@ -37,14 +50,16 @@
 
 .toast {
     visibility: hidden;
-    background-color: var(--gris-fonce, #333);
-    color: var(--jaune-clair);
+    background-color: var(--jaune-clair, #333);
+    color: var(--bleu-clair);
     text-align: center;
     border-radius: 8px;
     padding: 6px 12px;
-    position: absolute;
-    top: 110px; /* un peu sous l’image */
-    z-index: 10;
+    position: fixed; /* Changement ici */
+    left: 50%;
+    bottom: 40px; /* Décalé du bas de la fenêtre */
+    transform: translateX(-50%);
+    z-index: 2000;
     font-weight: bold;
     white-space: nowrap;
     opacity: 0;
@@ -81,7 +96,7 @@
   border: none;
   border-radius: 5px;
   font-size: 1em;
-  background-color: #f9f9f9;
+  background-color: var(--blanc);
 }
 
 .form-contact button {
@@ -105,14 +120,24 @@ textarea {
     min-height: 100px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .communication {
         flex-direction: column;
         align-items: center;
+        gap: 1em;
+        margin: 0px;
     }
 
-    .communication img {
-        width: 40%;
+    .communication a {
+        width: 30%;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+    .communication a {
+        width: 60%;
     }
     
 }

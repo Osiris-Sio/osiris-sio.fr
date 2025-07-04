@@ -8,6 +8,34 @@
     --gris: #444647;
 }
 
+.communication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5em;
+    overflow: hidden;
+}
+
+.communication a {
+    display: block;
+    width: 20%;
+    max-width: 100%;
+}
+
+.communication img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.communication img:hover {
+    border-color: var(--jaune-clair);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 .carrousel-container {
   overflow: hidden;
   width: 100%;
@@ -33,6 +61,7 @@
   transform: scale(1.05);
 }
 
+
 @keyframes defilement {
   0% {
     transform: translateX(0);
@@ -43,6 +72,16 @@
 }
 
 @media screen and (max-width: 880px) {
+
+  .communication {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .communication a {
+        width: 45%;
+    }
     
     @keyframes defilement {
   0% {

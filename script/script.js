@@ -1,10 +1,10 @@
-fetch('../page/header.html')
+fetch('/page/header.html')
 .then(response => response.text())
 .then(data => {
     document.getElementById('header').innerHTML = data;
     initBurgerMenu(); // Initialiser le menu burger après l'injection du header
 });
-fetch('../page/footer.html')
+fetch('/page/footer.html')
 .then(response => response.text())
 .then(data => document.getElementById('footer').innerHTML = data);
 

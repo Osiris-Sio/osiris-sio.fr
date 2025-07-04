@@ -15,7 +15,14 @@ body {
     font-family: "Nunito", sans-serif;
     font-style: normal;
     text-align: center;
-    margin-top: 175px;
+    margin-top: 100px;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    flex: 1;
 }
 
 article p{
@@ -41,7 +48,12 @@ article img {
 article h2{
     text-align: center;
     font-size: 32px;
-    margin: 90px 0 50px 20px;
+    margin: 90px 10px 50px 10px;
+}
+
+article a {
+    color: var(--jaune-clair);
+    text-decoration: none;
 }
 
 iframe {
@@ -62,8 +74,8 @@ iframe {
         padding-left: 10px;
     }
 
-    article img {
-        width: 50%;
+    .fond-logo {
+        width: 90%;
     }
 
     iframe {

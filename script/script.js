@@ -24,10 +24,21 @@ function initBurgerMenu() {
     if (burger && nav) {
         burger.addEventListener('click', function() {
             nav.classList.toggle('open');
+            burger.classList.toggle('open');
+            // Ajoute ou retire la classe menu-open sur le body
+            if (nav.classList.contains('open')) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
         });
         // Fermer le menu quand on clique sur un lien
         nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                burger.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
         });
     }
 }

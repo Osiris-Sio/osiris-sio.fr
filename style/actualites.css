@@ -7,9 +7,12 @@
     --gris: #444647;
 }
 
+body {
+  margin-top: 175px;
+}
+
 .actualites h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 .actualites h3 {

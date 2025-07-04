@@ -1,0 +1,100 @@
+:root {
+    --bleu: #001A46;
+    --bleu-clair: #007BFF;
+    --jaune: #FFD100;
+    --jaune-clair: #FFFA8C;
+    --blanc: #ffffff;
+    --gris-fonce: #23272a;
+    --gris: #444647;
+}
+
+.communication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5em;
+    overflow: hidden;
+}
+
+.communication a {
+    display: block;
+    width: 20%;
+    max-width: 100%;
+}
+
+.communication img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.communication img:hover {
+    border-color: var(--jaune-clair);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.carrousel-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--gris);
+  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  padding: 20px 0;
+}
+
+.carrousel-slider {
+  display: flex;
+  gap: 30px;
+  animation: defilement 30s linear infinite;
+}
+
+.carrousel-slider a:hover img {
+  transform: scale(1.1);
+}
+
+.carrousel-slider img {
+  width: auto;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s;
+}
+
+.carrousel-slider img:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 880px) {
+
+  .communication {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .communication a {
+        width: 45%;
+    }
+    
+    @keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+}

@@ -1,69 +1,86 @@
+:root {
+    --bleu: #001A46;
+    --bleu-clair: #007BFF;
+    --jaune: #FFD100;
+    --jaune-clair: #FFFA8C;
+    --blanc: #ffffff;
+    --gris-fonce: #23272a;
+}
+
 body {
-    background-color: rgb(19, 17, 17);
+    background-color: var(--gris-fonce);
     margin: 0;
     padding: 0;
-    color : white;
+    color : var(--blanc);
     font-family: "Nunito", sans-serif;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-image: url('/img/fond.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-style: normal;
+    text-align: center;
+    margin-top: 100px;
+    min-height: 92vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    transition: padding 0.3s, box-shadow 0.3s;
-    font-size: 1.2em;
-    color: #ffce5e;
 }
 
-#logo {
-    font-weight: bold;
-    margin-bottom: 10px; /* Espace sous le logo */
-    margin-right: 0; /* Plus besoin de marge à droite */
+article {
+    flex: 1;
 }
 
-header img {
-    width: 10em;
-    border-radius: 100%;
+article p{
+    text-align: left;
+    font-size: 20px; 
+    border-left: var(--jaune-clair) 3px solid;
+    margin-left: 60px;
+    padding: 0px 20px;
 }
 
-#menu {
-    width: 100%;
-    background-color: #ffce5e;
-    justify-items: center;
-    padding: 30px;
+article img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: var(--jaune) 2px solid;
 }
 
-#menu.compact {
-    padding: 8px 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+.fond-logo {
+    width: 50%;
 }
 
-#menu {
-    color: #fff;
-    background-color: #002654;
+article h2{
     text-align: center;
-    padding: 10px;
+    font-size: 32px;
+    margin: 90px 10px 50px 10px;
 }
 
-#menu ul {
-    padding: 0px; /* Aucun espace en plus de la liste (intérieur et extérieur) */ 
-    margin: 0px;
+article a {
+    color: var(--jaune-clair);
+    text-decoration: none;
 }
 
-#menu li{
-    display: inline-block; /* Blocs qui se suivent en ligne */
-    margin: 50px 0px; /* Un espace de 50px entre chaque puce/bouton */
+iframe {
+    width: 560px;
+    height: 315px;
 }
 
-body {
-    padding-top: 130px; /* Pour éviter que le contenu passe sous la navbar */
+/* ----- Responsive ----- */
+@media (max-width: 880px) {
+
+    article h2{
+        font-size: 28px;
+    }
+
+    article p{
+        font-size: 18px; 
+        margin-left: 5px;
+        padding-left: 10px;
+    }
+
+    .fond-logo {
+        width: 90%;
+    }
+
+    iframe {
+    width: 320px;
+    height: 180px;
+}
+
 }

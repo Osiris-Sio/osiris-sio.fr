@@ -1,0 +1,143 @@
+:root {
+    --bleu: #001A46;
+    --bleu-clair: #007BFF;
+    --jaune: #FFD100;
+    --jaune-clair: #FFFA8C;
+    --blanc: #ffffff;
+    --gris-fonce: #23272a;
+    --gris: #444647;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+}
+
+.communication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6em;
+    overflow: hidden;
+    margin: 0px 50px;
+}
+
+.communication a{
+    display: block;
+    width: 20%;
+}
+
+.communication img {
+    width: 97%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.communication img:hover {
+    border-color: var(--jaune-clair);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.email-icon-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toast {
+    visibility: hidden;
+    background-color: var(--jaune-clair, #333);
+    color: var(--bleu-clair);
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 12px;
+    position: fixed; /* Changement ici */
+    left: 50%;
+    bottom: 40px; /* Décalé du bas de la fenêtre */
+    transform: translateX(-50%);
+    z-index: 2000;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto ;
+  padding: 20px;
+  background-color: var(--bleu);
+  background: var(--gris);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  border-radius: 10px;
+}
+
+.form-contact label {
+  color: var(--jaune-clair);
+  font-weight: bold;
+}
+
+.form-contact input, .form-contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: var(--blanc);
+}
+
+.form-contact button {
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: var(--jaune);
+  color: var(--bleu);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-contact button:hover {
+  background-color: var(--jaune-clair);
+}
+
+textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+    .communication {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin: 0px;
+    }
+
+    .communication a {
+        width: 30%;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+    .communication a {
+        width: 60%;
+    }
+    
+}

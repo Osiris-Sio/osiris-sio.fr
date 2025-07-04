@@ -1,26 +1,12 @@
-function getProjectRoot() {
-  const path = window.location.pathname;
-  const parts = path.split('/');
-  if (parts.includes('osiris-sio.fr')) {
-    return '/osiris-sio.fr/';
-  }
-  return '/';
-}
-
-const root = getProjectRoot();
-
-fetch(root + 'page/header.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('header').innerHTML = html;
+fetch('header.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('header').innerHTML = data;
     initBurgerMenu();
-  });
-
-fetch(root + 'page/footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer').innerHTML = html;
-  });
+});
+fetch('footer.html')
+.then(response => response.text())
+.then(data => document.getElementById('footer').innerHTML = data);
 
 
 // Gestion de la classe 'compact' sur le menu au scroll

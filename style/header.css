@@ -37,7 +37,6 @@ header {
 
 .main-nav {
   flex: 1;
-  margin-left: 2em;
 }
 
 .nav-liens {
@@ -171,7 +170,7 @@ body.menu-open #scrollTopBtn {
 }
 
 /* ----- Responsive ----- */
-@media (max-width: 880px) {
+@media (max-width: 900px) {
 
 .logo {
     position: static;

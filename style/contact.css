@@ -17,10 +17,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6em;
+    gap: 5em;
     overflow: hidden;
     margin: 0px 50px;
 }
+
 
 .communication a{
     display: block;
@@ -124,8 +125,8 @@ textarea {
     .communication {
         flex-direction: column;
         align-items: center;
-        gap: 1em;
-        margin: 0px;
+        gap: 0em;
+        margin: 10px 0px;
     }
 
     .communication a {

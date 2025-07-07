@@ -1,17 +1,28 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
 .communication a {
-    width: 30%;
+  width: 30%;
 }
 
+/* Responsive styles */
 @media screen and (max-width: 1000px) {
-    .communication a {
-        width: 40%;
-    }
-    
+  .communication a {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 880px) {
-    .communication a {
-        width: 60%;
-    }
-    
+  .communication a {
+    width: 60%;
+  }
 }

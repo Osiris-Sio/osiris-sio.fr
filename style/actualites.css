@@ -1,10 +1,23 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+/* Couleurs */
 :root {
-    --bleu: #001A46;
-    --bleu-clair: #007BFF;
-    --jaune: #FFD100;
-    --jaune-clair: #FFFA8C;
-    --blanc: #ffffff;
-    --gris: #444647;
+  --bleu: #001a46;
+  --bleu-clair: #007bff;
+  --jaune: #ffd100;
+  --jaune-clair: #fffa8c;
+  --blanc: #ffffff;
+  --gris: #444647;
 }
 
 body {
@@ -29,16 +42,16 @@ body {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-left: 5px solid var(--jaune);
-  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
   width: 95%;
 }
 
 .actu img {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .actu img:hover {
   border-color: var(--jaune-clair);
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
 }

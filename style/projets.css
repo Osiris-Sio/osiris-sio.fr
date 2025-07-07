@@ -1,46 +1,59 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+/* Couleurs */
 :root {
-    --bleu: #001A46;
-    --bleu-clair: #007BFF;
-    --jaune: #FFD100;
-    --jaune-clair: #FFFA8C;
-    --blanc: #ffffff;
-    --gris-fonce: #23272a;
-    --gris: #444647;
+  --bleu: #001a46;
+  --bleu-clair: #007bff;
+  --jaune: #ffd100;
+  --jaune-clair: #fffa8c;
+  --blanc: #ffffff;
+  --gris-fonce: #23272a;
+  --gris: #444647;
 }
 
 .communication {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5em;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  overflow: hidden;
 }
 
 .communication a {
-    display: block;
-    width: 20%;
-    max-width: 100%;
+  display: block;
+  width: 20%;
+  max-width: 100%;
 }
 
 .communication img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
 }
 
 .communication img:hover {
-    border-color: var(--jaune-clair);
-    transform: scale(1.05);
-    cursor: pointer;
+  border-color: var(--jaune-clair);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .carrousel-container {
   overflow: hidden;
   width: 100%;
   background-color: var(--gris);
-  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
   padding: 20px 0;
 }
 
@@ -66,7 +79,7 @@
   transform: scale(1.05);
 }
 
-
+/* Animation pour le défilement des images */
 @keyframes defilement {
   0% {
     transform: translateX(0);
@@ -76,25 +89,24 @@
   }
 }
 
+/* Responsive styles */
 @media screen and (max-width: 880px) {
-
   .communication {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-    }
-
-    .communication a {
-        width: 45%;
-    }
-    
-    @keyframes defilement {
-  0% {
-    transform: translateX(0);
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
-  100% {
-    transform: translateX(-250%);
-  }
-}
 
+  .communication a {
+    width: 45%;
+  }
+
+  @keyframes defilement {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
 }

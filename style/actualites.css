@@ -42,3 +42,33 @@ body {
     cursor: pointer;
     transform: scale(1.05);
 }
+
+@keyframes arrivee_gauche {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrivee_droite {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.de_gauche {
+    animation: arrivee_gauche 1s ease-out;
+}
+
+.de_droite {
+    animation: arrivee_droite 1s ease-out;
+}

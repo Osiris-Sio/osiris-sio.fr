@@ -1,16 +1,3 @@
-/*
-Auteurs :
-  - Louis AMEDRO (alias Osiris Sio)
-  - Chloé LEFETZ
-
-Testeurs :
-  - Jules HERBAUX
-  - Marylou LAPÔTRE
-
-© 2025 Osiris Sio – Tous droits réservés.
-*/
-
-/* Couleurs */
 :root {
   --bleu-fonce: #001a46;
   --bleu-clair: #007bff;
@@ -54,6 +41,7 @@ header {
 
 .main-nav {
   flex: 1;
+  margin-left: 2em;
 }
 
 .nav-liens {
@@ -145,7 +133,7 @@ header {
 }
 
 /* Bouton flèche vers le haut */
-#fleche-haut {
+#scrollTopBtn {
   position: fixed;
   bottom: 0.5em;
   right: 1em;
@@ -167,17 +155,17 @@ header {
   justify-content: center;
 }
 
-#fleche-haut.show {
+#scrollTopBtn.show {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
 }
 
-#fleche-haut:active {
+#scrollTopBtn:active {
   transform: scale(0.92);
 }
 
-#fleche-haut:hover {
+#scrollTopBtn:hover {
   background: var(--jaune);
   color: var(--bleu-fonce);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -185,15 +173,15 @@ header {
 }
 
 /* Masquer la flèche quand le menu burger est ouvert */
-.main-nav.open ~ #fleche-haut,
-.burger.open ~ #fleche-haut,
-body.menu-open #fleche-haut {
+.main-nav.open ~ #scrollTopBtn,
+.burger.open ~ #scrollTopBtn,
+body.menu-open #scrollTopBtn {
   opacity: 0 !important;
   pointer-events: none !important;
 }
 
-/* Responsive styles */
-@media (max-width: 900px) {
+/* ----- Responsive ----- */
+@media (max-width: 880px) {
   .logo {
     position: static;
     display: flex;
@@ -239,6 +227,8 @@ body.menu-open #fleche-haut {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto; /* Permet de cliquer sur les éléments du menu */
+    padding-top: 40px;
+    padding-bottom: 0px;
   }
 
   .main-nav.open .nav-liens {
@@ -249,7 +239,6 @@ body.menu-open #fleche-haut {
 
   .nav-liens {
     flex-direction: column;
-    padding: 1em 0;
   }
 
   .nav-liens li a {
@@ -262,7 +251,7 @@ body.menu-open #fleche-haut {
     flex-direction: column;
     align-items: flex-end;
     padding-right: 2em;
-    gap: 1.5em;
+    gap: 0.5em;
   }
 
   .main-nav.open .reseaux img {
@@ -276,8 +265,8 @@ body.menu-open #fleche-haut {
   .burger {
     display: flex;
     position: fixed;
-    top: 2em;
-    right: 2em;
+    top: 0.7em;
+    right: 0.7em;
     background: var(--bleu-fonce);
     border: var(--jaune) 2px solid;
     border-radius: 30%;
@@ -286,7 +275,7 @@ body.menu-open #fleche-haut {
     z-index: 1200;
   }
 
-  #fleche-haut {
+  #scrollTopBtn {
     bottom: 0.5em;
     right: 0.2em;
     width: 48px;
@@ -305,7 +294,7 @@ body.menu-open #fleche-haut {
   will-change: transform;
 }
 
-/* Compact header */
+/* ----- Compact header on scroll (optionnel) ----- */
 header.compact {
   padding: 0.3em 2em;
 }
@@ -314,18 +303,18 @@ header.compact .logo img {
   height: 45px;
 }
 
-/* Responsive Téléphone */
+/* Téléphone */
 @media (max-width: 700px) {
   .main-nav {
     width: auto;
     padding-left: 20px;
   }
 
-  .main-nav.open .nav-liens {
-    margin-top: 100px;
+  .nav-liens li a {
+    font-size: 1em;
   }
 
-  .nav-liens li a {
-    font-size: 1.1em;
+  .main-nav.open {
+    padding-top: 2em;
   }
 }

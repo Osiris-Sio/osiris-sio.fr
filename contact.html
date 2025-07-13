@@ -1,84 +1,126 @@
+<!--
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/contact.css" />
     <script src="script/script.js"></script>
 
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Osiris Sio</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="header"></div>
 
     <article>
-        <h2>Comment me contacter ?</h2>
+      <h2>Comment me contacter ?</h2>
 
-        <p>
-            C'est très simple ! Utilise l’un des moyens ci-dessous pour me contacter ou suivre mon activité :
-        </p>
+      <p>
+        C'est très simple ! Utilise l’un des moyens ci-dessous pour me contacter
+        ou suivre mon activité :
+      </p>
 
-        <div class="communication">
+      <div class="communication">
+        <!-- Réseaux sociaux -->
+        <a
+          href="#"
+          onclick="copierEmail(); return false;"
+          title="Cliquer pour copier l'adresse e-mail"
+        >
+          <img src="img/email.png" alt="Email" />
+        </a>
+        <a href="https://www.youtube.com/@osiris_sio" target="_blank"
+          ><img src="img/youtube.png" alt="YouTube"
+        /></a>
+        <a href="https://www.tiktok.com/@osirissio" target="_blank"
+          ><img src="img/tiktok.png" alt="TikTok"
+        /></a>
+      </div>
 
-            <!-- Réseaux sociaux -->
-            <a href="#" onclick="copierEmail(); return false;" title="Cliquer pour copier l'adresse e-mail">
-                <img src="img/email.png" alt="Email" />
-            </a>
-            <a href="https://www.youtube.com/@osiris_sio" target="_blank"><img src="img/youtube.png" alt="YouTube" /></a>
-            <a href="https://www.tiktok.com/@osirissio" target="_blank"><img src="img/tiktok.png" alt="TikTok" /></a>
-            
+      <div class="communication">
+        <a href="https://discord.com/invite/M3qayd8XD6" target="_blank"
+          ><img src="img/discord.png" alt="Discord"
+        /></a>
+        <a href="https://www.instagram.com/osirissio/" target="_blank"
+          ><img src="img/instagram.png" alt="Instagram"
+        /></a>
+      </div>
+
+      <div class="image-email">
+        <div class="email-copie" id="message-email-copie">
+          Adresse e-mail copiée !
         </div>
+      </div>
 
-        <div class="communication">
-            <a href="https://discord.com/invite/M3qayd8XD6" target="_blank"><img src="img/discord.png" alt="Discord" /></a>
-            <a href="https://www.instagram.com/osirissio/" target="_blank"><img src="img/instagram.png" alt="Instagram" /></a>
-        </div>
+      <h2>Me contacter via le formulaire</h2>
+      <p>
+        Tu préfères passer par un message direct ? Envoie-moi un mail via ce
+        formulaire :
+      </p>
 
-        
-            <div class="email-icon-wrapper">
-                <div class="toast" id="email-toast">Adresse e-mail copiée !</div>
-            </div>
+      <form
+        action="https://formsubmit.co/osiris62100@hotmail.fr"
+        method="POST"
+        class="form-contact"
+      >
+        <!-- Supprimer le captcha et rediriger vers une page de remerciement -->
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="text" name="_honey" style="display: none" />
 
-        <h2>Me contacter via le formulaire</h2>
-        <p>Tu préfères passer par un message direct ? Envoie-moi un mail via ce formulaire :</p>
+        <label for="name">Nom / Pseudo</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Ton nom ou pseudo"
+        />
 
-        <form action="https://formsubmit.co/osiris62100@hotmail.fr" method="POST" class="form-contact">
-            <!-- Supprimer le captcha et rediriger vers une page de remerciement -->
-            <input type="hidden" name="_captcha" value="true">
-            <input type="text" name="_honey" style="display:none">
+        <label for="email">Adresse e-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="ton@email.com"
+        />
 
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder="Ton message ici..."
+        ></textarea>
 
-            <label for="name">Nom / Pseudo</label>
-            <input type="text" id="name" name="name" required placeholder="Ton nom ou pseudo">
-
-            <label for="email">Adresse e-mail</label>
-            <input type="email" id="email" name="email" required placeholder="ton@email.com">
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Ton message ici..."></textarea>
-
-            <button type="submit">Envoyer</button>
-  </form>
-
-        
+        <button type="submit">Envoyer</button>
+      </form>
     </article>
-
 
     <div id="footer"></div>
 
-    <button id="scrollTopBtn" aria-label="Remonter en haut">
-        &#8679;
-    </button>
-
-</body>
-
-
+    <button id="fleche-haut" aria-label="Remonter en haut">&#8679;</button>
+  </body>
 </html>

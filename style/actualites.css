@@ -1,10 +1,23 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+/* Couleurs */
 :root {
-    --bleu: #001A46;
-    --bleu-clair: #007BFF;
-    --jaune: #FFD100;
-    --jaune-clair: #FFFA8C;
-    --blanc: #ffffff;
-    --gris: #444647;
+  --bleu: #001a46;
+  --bleu-clair: #007bff;
+  --jaune: #ffd100;
+  --jaune-clair: #fffa8c;
+  --blanc: #ffffff;
+  --gris: #444647;
 }
 
 body {
@@ -29,16 +42,53 @@ body {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-left: 5px solid var(--jaune);
-  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
   width: 95%;
 }
 
 .actu img {
-    transition: transform 0.3s ease-in-out;
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .actu img:hover {
   border-color: var(--jaune-clair);
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+@keyframes arrivee_gauche {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrivee_droite {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.de_gauche {
+  animation: arrivee_gauche 1s ease-out;
+}
+
+.de_droite {
+  animation: arrivee_droite 1s ease-out;
+}
+
+@media (max-width: 950px) {
+  .actu img {
+    width: 80%;
+  }
 }

@@ -1,75 +1,87 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+/* Couleurs */
 :root {
-    --bleu: #001A46;
-    --bleu-clair: #007BFF;
-    --jaune: #FFD100;
-    --jaune-clair: #FFFA8C;
-    --blanc: #ffffff;
-    --gris-fonce: #23272a;
-    --gris: #444647;
+  --bleu: #001a46;
+  --bleu-clair: #007bff;
+  --jaune: #ffd100;
+  --jaune-clair: #fffa8c;
+  --blanc: #ffffff;
+  --gris-fonce: #23272a;
+  --gris: #444647;
 }
 
+/* Forcer l'utilisation de la police Nunito */
 * {
-    font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .communication {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5em;
-    overflow: hidden;
-    margin: 0px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  overflow: hidden;
+  margin: 0px 50px;
 }
 
-
-.communication a{
-    display: block;
-    width: 20%;
+.communication a {
+  display: block;
+  width: 20%;
 }
 
 .communication img {
-    width: 97%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease-in-out;
+  width: 97%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
 }
 
 .communication img:hover {
-    border-color: var(--jaune-clair);
-    transform: scale(1.05);
-    cursor: pointer;
+  border-color: var(--jaune-clair);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-
-.email-icon-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.image-email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.toast {
-    visibility: hidden;
-    background-color: var(--jaune-clair, #333);
-    color: var(--bleu-clair);
-    text-align: center;
-    border-radius: 8px;
-    padding: 6px 12px;
-    position: fixed; /* Changement ici */
-    left: 50%;
-    bottom: 40px; /* Décalé du bas de la fenêtre */
-    transform: translateX(-50%);
-    z-index: 2000;
-    font-weight: bold;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+.email-copie {
+  visibility: hidden;
+  background-color: var(--jaune-clair, #333);
+  color: var(--bleu-clair);
+  text-align: center;
+  border-radius: 8px;
+  padding: 6px 12px;
+  position: fixed; /* Changement ici */
+  left: 50%;
+  bottom: 40px; /* Décalé du bas de la fenêtre */
+  transform: translateX(-50%);
+  z-index: 2000;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
-.toast.show {
-    visibility: visible;
-    opacity: 1;
+.email-copie.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .form-contact {
@@ -77,13 +89,13 @@
   flex-direction: column;
   gap: 15px;
   max-width: 600px;
-  margin: auto ;
+  margin: auto;
   padding: 20px;
   background-color: var(--bleu);
   background: var(--gris);
   padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 10px 10px 10px rgba(0,0,0,1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
   border-radius: 10px;
 }
 
@@ -92,7 +104,8 @@
   font-weight: bold;
 }
 
-.form-contact input, .form-contact textarea {
+.form-contact input,
+.form-contact textarea {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -117,28 +130,25 @@
 }
 
 textarea {
-    resize: none;
-    min-height: 100px;
+  resize: none;
+  min-height: 100px;
 }
 
 @media screen and (max-width: 1200px) {
-    .communication {
-        flex-direction: column;
-        align-items: center;
-        gap: 0em;
-        margin: 10px 0px;
-    }
+  .communication {
+    flex-direction: column;
+    align-items: center;
+    gap: 0em;
+    margin: 10px 0px;
+  }
 
-    .communication a {
-        width: 30%;
-    }
-    
+  .communication a {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    
-    .communication a {
-        width: 60%;
-    }
-    
+  .communication a {
+    width: 60%;
+  }
 }

@@ -1,0 +1,68 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+body {
+  background-color: #23272a;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 150px;
+}
+
+article {
+  max-width: 1000px;
+  width: calc(100% - 40px);
+  margin: 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #2c2f33;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: apparition_bas 1s ease-in;
+}
+
+@keyframes apparition_bas {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

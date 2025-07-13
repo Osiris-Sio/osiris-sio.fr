@@ -1,86 +1,108 @@
+/*
+Auteurs :
+  - Louis AMEDRO (alias Osiris Sio)
+  - Chloé LEFETZ
+
+Testeurs :
+  - Jules HERBAUX
+  - Marylou LAPÔTRE
+
+© 2025 Osiris Sio – Tous droits réservés.
+*/
+
+/* Couleurs */
 :root {
-    --bleu: #001A46;
-    --bleu-clair: #007BFF;
-    --jaune: #FFD100;
-    --jaune-clair: #FFFA8C;
-    --blanc: #ffffff;
-    --gris-fonce: #23272a;
+  --bleu: #001a46;
+  --bleu-clair: #007bff;
+  --jaune: #ffd100;
+  --jaune-clair: #fffa8c;
+  --blanc: #ffffff;
+  --gris-fonce: #23272a;
 }
 
 body {
-    background-color: var(--gris-fonce);
-    margin: 0;
-    padding: 0;
-    color : var(--blanc);
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    text-align: center;
-    margin-top: 100px;
-    min-height: 92vh;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--gris-fonce);
+  margin: 0;
+  padding: 0;
+  color: var(--blanc);
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  text-align: center;
+  margin-top: 100px;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
 }
 
 article {
-    flex: 1;
+  flex: 1;
 }
 
-article p{
-    text-align: left;
-    font-size: 20px; 
-    border-left: var(--jaune-clair) 3px solid;
-    margin-left: 60px;
-    padding: 0px 20px;
+article p {
+  text-align: left;
+  font-size: 20px;
+  border-left: var(--jaune-clair) 3px solid;
+  margin-left: 60px;
+  padding: 0px 20px;
 }
 
 article img {
-    width: 25%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    border: var(--jaune) 2px solid;
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: var(--jaune) 2px solid;
 }
 
 .fond-logo {
-    width: 50%;
+  width: 50%;
 }
 
-article h2{
-    text-align: center;
-    font-size: 32px;
-    margin: 90px 10px 50px 10px;
+article h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 90px 10px 50px 10px;
 }
 
 article a {
-    color: var(--jaune-clair);
-    text-decoration: none;
+  color: var(--jaune-clair);
+  text-decoration: none;
 }
 
 iframe {
-    width: 560px;
-    height: 315px;
+  width: 560px;
+  height: 315px;
+  border-radius: 10px;
 }
 
-/* ----- Responsive ----- */
+/* Responsive styles */
 @media (max-width: 880px) {
+  article h2 {
+    font-size: 28px;
+  }
 
-    article h2{
-        font-size: 28px;
-    }
+  article p {
+    font-size: 18px;
+    margin-left: 5px;
+    padding-left: 10px;
+  }
 
-    article p{
-        font-size: 18px; 
-        margin-left: 5px;
-        padding-left: 10px;
-    }
+  .fond-logo {
+    width: 90%;
+  }
 
-    .fond-logo {
-        width: 90%;
-    }
-
-    iframe {
-    width: 320px;
-    height: 180px;
+  iframe {
+    width: 80%;
+    height: 200px;
+  }
 }
 
+@media (max-width: 380px) {
+  .fond-logo {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+  }
 }

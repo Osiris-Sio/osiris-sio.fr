@@ -72,6 +72,7 @@ article a {
 iframe {
   width: 560px;
   height: 315px;
+  border-radius: 10px;
 }
 
 /* Responsive styles */
@@ -92,6 +93,7 @@ iframe {
 
   iframe {
     width: 80%;
+    height: 200px;
   }
 }
 

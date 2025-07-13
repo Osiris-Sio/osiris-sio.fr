@@ -133,10 +133,10 @@ header {
 }
 
 /* Bouton flèche vers le haut */
-#scrollTopBtn {
+#fleche-haut {
   position: fixed;
-  bottom: 0.5em;
-  right: 1em;
+  bottom: 0.4em;
+  right: 0.2em;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -155,17 +155,17 @@ header {
   justify-content: center;
 }
 
-#scrollTopBtn.show {
+#fleche-haut.show {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
 }
 
-#scrollTopBtn:active {
+#fleche-haut:active {
   transform: scale(0.92);
 }
 
-#scrollTopBtn:hover {
+#fleche-haut:hover {
   background: var(--jaune);
   color: var(--bleu-fonce);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -316,5 +316,12 @@ header.compact .logo img {
 
   .main-nav.open {
     padding-top: 2em;
+  }
+
+  #fleche-haut {
+    position: fixed;
+    bottom: 0.4em;
+    left: 46%;
+    right: auto;
   }
 }

@@ -47,6 +47,7 @@ body {
 }
 
 .actu img {
+  width: 30%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -84,4 +85,10 @@ body {
 
 .de_droite {
   animation: arrivee_droite 1s ease-out;
+}
+
+@media (max-width: 950px) {
+  .actu img {
+    width: 80%;
+  }
 }

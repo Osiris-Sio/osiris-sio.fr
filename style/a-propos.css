@@ -11,11 +11,10 @@ Testeurs :
 */
 
 body {
-  background-color: #1a1a1d;
-  color: #f5f5f5;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #23272a;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 150px;
 }
 
 article {
@@ -51,7 +50,6 @@ p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 25px;
-  color: #e0e0e0;
 }
 
 @media (max-width: 768px) {

@@ -58,14 +58,10 @@ article img {
   width: 50%;
 }
 
-.ezio {
-  width: 20%;
-}
-
 article h2 {
   text-align: center;
   font-size: 32px;
-  margin: 55px 10px 30px 10px;
+  margin: 80px 10px 30px 10px;
 }
 
 article a {
@@ -97,10 +93,6 @@ article img:hover {
     width: 100%;
   }
 
-  .ezio {
-    height: 100%;
-  }
-
   iframe {
     width: 100%;
   }
@@ -119,10 +111,6 @@ article img:hover {
 
   .fond-logo {
     width: 90%;
-  }
-
-  .ezio {
-    width: 60%;
   }
 
   iframe {

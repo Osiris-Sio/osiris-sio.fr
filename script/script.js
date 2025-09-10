@@ -40,10 +40,18 @@ function initBurgerMenu() {
     burger.addEventListener('click', function () {
       nav.classList.toggle('open');
       burger.classList.toggle('open');
-      // Ajoute ou retire la classe menu-open sur le body
+      // Ajoute ou retire la classe menu-open sur le body - Animation
       if (nav.classList.contains('open')) {
+        nav.style.left = '0';
+        nav.style.transform = 'translateX(0)';
         document.body.classList.add('menu-open');
       } else {
+        // Menu fermé → glisse vers la droite
+        nav.style.transform = 'translateX(-100%)';
+        setTimeout(() => {
+          nav.style.left = '-100%'; // remet hors écran à gauche
+          nav.style.transform = 'translateX(0)';
+        }, 500); // doit correspondre à la durée de transition CSS
         document.body.classList.remove('menu-open');
       }
     });

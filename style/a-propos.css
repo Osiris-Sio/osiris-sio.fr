@@ -10,17 +10,10 @@ Testeurs :
 © 2025 Osiris Sio – Tous droits réservés.
 */
 
-body {
-  background-color: #23272a;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
-  margin-top: 150px;
-}
-
 article {
   max-width: 1000px;
   width: calc(100% - 40px);
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 20px;
   box-sizing: border-box;
   background-color: #2c2f33;
@@ -32,7 +25,7 @@ article {
 @keyframes apparition_bas {
   0% {
     opacity: 0;
-    transform: translateY(40px) scale(0.95);
+    transform: translateY(40px) scale(1);
   }
   100% {
     opacity: 1;
@@ -41,9 +34,9 @@ article {
 }
 
 h2 {
-  font-size: 2rem;
-  position: relative;
-  margin-bottom: 4px;
+  text-align: center;
+  font-size: 32px;
+  margin: 70px 10px 0px 10px;
 }
 
 p {
@@ -53,16 +46,11 @@ p {
 }
 
 @media (max-width: 768px) {
-  article {
-    padding: 20px;
-    margin: 30px 15px;
+  article p {
+    padding-right: 0px;
   }
 
   h2 {
     font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
   }
 }

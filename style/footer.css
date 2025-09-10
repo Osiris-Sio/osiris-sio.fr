@@ -22,8 +22,6 @@ Testeurs :
 }
 
 footer {
-  font-family: 'Nunito', sans-serif;
-  bottom: 0;
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -31,18 +29,55 @@ footer {
     var(--bleu-clair) 100%
   );
   color: var(--jaune);
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 30px;
+  padding: 30px 10px 10px 10px;
+  margin-top: 15px;
 }
 
-footer a {
+.footer-container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-bas p {
+  margin: 20px 0px;
+  font-size: 0.9em;
+}
+
+.footer-bas a {
   color: var(--jaune-clair);
+  text-decoration: underline;
+}
+
+.footer-haut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-haut a {
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.footer-haut a:hover {
+  transform: scale(1.2);
+}
+
+.footer-haut img {
+  width: 32px;
+  height: 32px;
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(199deg) brightness(108%)
+    contrast(101%);
 }
 
 @media screen and (max-width: 880px) {
   footer {
-    font-size: 0.9em;
     padding-bottom: 70px;
   }
 }

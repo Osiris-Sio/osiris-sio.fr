@@ -49,7 +49,7 @@ Testeurs :
 }
 
 .communication img:hover {
-  border-color: var(--jaune-clair);
+  border-color: var(--blanc);
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -95,12 +95,11 @@ Testeurs :
   background: var(--gris);
   padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
   border-radius: 10px;
 }
 
 .form-contact label {
-  color: var(--jaune-clair);
+  color: var(--jaune);
   font-weight: bold;
 }
 
@@ -119,14 +118,14 @@ Testeurs :
   font-weight: bold;
   background-color: var(--jaune);
   color: var(--bleu);
-  border: none;
+  border: 4px solid var(--jaune);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .form-contact button:hover {
-  background-color: var(--jaune-clair);
+  background-color: var(--blanc);
 }
 
 textarea {

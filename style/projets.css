@@ -85,7 +85,7 @@ Testeurs :
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-125%);
   }
 }
 
@@ -98,7 +98,7 @@ Testeurs :
   }
 
   .communication a {
-    width: 45%;
+    width: 70%;
   }
 
   @keyframes defilement {
@@ -106,7 +106,7 @@ Testeurs :
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-500%);
     }
   }
 }

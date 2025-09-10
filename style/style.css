@@ -18,6 +18,7 @@ Testeurs :
   --jaune-clair: #fffa8c;
   --blanc: #ffffff;
   --gris-fonce: #23272a;
+  --noir: #000000;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 90px;
   min-height: 92vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@ article {
 article p {
   text-align: left;
   font-size: 20px;
-  border-left: var(--jaune-clair) 3px solid;
+  border-left: var(--jaune) 4px solid;
   margin-left: 60px;
   padding: 0px 20px;
 }
@@ -61,12 +62,30 @@ article img {
 article h2 {
   text-align: center;
   font-size: 32px;
-  margin: 80px 10px 30px 10px;
+  margin: 40px 10px 5px 10px;
 }
 
 article a {
   color: var(--jaune-clair);
   text-decoration: none;
+}
+
+article img,
+iframe {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: var(--jaune) 4px solid;
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+article img:hover,
+iframe:hover {
+  border-color: var(--blanc);
+  cursor: pointer;
+  transform: scale(1.03);
 }
 
 iframe {
@@ -75,15 +94,17 @@ iframe {
   border-radius: 10px;
 }
 
-article img {
-  width: 30%;
-  transition: transform 0.3s ease-in-out;
+/* Réseaux */
+
+article .reseaux div {
+  display: flex;
+  align-items: center;
+  margin: 20px 100px;
 }
 
-article img:hover {
-  border-color: var(--jaune-clair);
-  cursor: pointer;
-  transform: scale(1.05);
+article .reseaux div img {
+  width: 400px;
+  height: auto;
 }
 
 /* Responsive styles */
@@ -97,16 +118,23 @@ article img:hover {
     width: 100%;
   }
 }
+@media (max-width: 1200px) {
+  article .reseaux div {
+    margin: 20px 30px;
+  }
+}
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
   article h2 {
     font-size: 28px;
+    margin-top: 25px;
   }
 
   article p {
     font-size: 18px;
     margin-left: 5px;
     padding-left: 10px;
+    border-left: var(--jaune) 2px solid;
   }
 
   .fond-logo {
@@ -114,7 +142,27 @@ article img:hover {
   }
 
   iframe {
+    width: 90%;
+    height: 15em;
+  }
+
+  article img {
+    border: var(--jaune) 2px solid;
+  }
+
+  /* Réseaux */
+
+  article .reseaux div {
+    display: contents;
+    margin: 0px 100px;
+  }
+
+  article .reseaux div p {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
+  article .reseaux div img {
     width: 80%;
-    height: 200px;
   }
 }

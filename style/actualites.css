@@ -48,6 +48,7 @@ Testeurs :
   flex-direction: column;
   gap: 0.8em;
   animation: animation_arrivee 1s ease-out;
+  margin-top: 20px;
 }
 
 article p {

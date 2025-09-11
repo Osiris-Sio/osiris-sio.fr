@@ -17,6 +17,7 @@ Testeurs :
   --jaune: #ffd100;
   --jaune-clair: #fffa8c;
   --blanc: #ffffff;
+  --gris: #444647;
   --gris-fonce: #23272a;
   --noir: #000000;
 }
@@ -63,8 +64,10 @@ article h2 {
   text-align: center;
   font-size: 32px;
   margin: 40px 10px 5px 10px;
+  padding: 0.4em 0.8em;
+  background-color: var(--gris);
+  border-radius: 12px;
 }
-
 article a {
   color: var(--jaune-clair);
   text-decoration: none;
@@ -126,7 +129,7 @@ article .reseaux div img {
 
 @media (max-width: 880px) {
   article h2 {
-    font-size: 28px;
+    font-size: 22px;
     margin-top: 25px;
   }
 

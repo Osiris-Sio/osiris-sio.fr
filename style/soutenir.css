@@ -10,19 +10,20 @@ Testeurs :
 © 2025 Osiris Sio – Tous droits réservés.
 */
 
+:root {
+  --bleu-clair: #007bff;
+}
+
 .communication a {
   width: 30%;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 1000px) {
-  .communication a {
-    width: 40%;
-  }
+.communication img:hover {
+  border-color: var(--bleu-clair);
 }
 
 @media screen and (max-width: 880px) {
   .communication a {
-    width: 60%;
+    width: 80%;
   }
 }

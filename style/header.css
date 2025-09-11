@@ -147,7 +147,7 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s, transform 0.4s, box-shadow 0.3s, background 0.3s;
-  z-index: 3000;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,10 +224,10 @@ body.menu-open #scrollTopBtn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70%;
-    padding-right: 0.5em;
-    margin: 0 1.3em;
-    margin-top: 70px; /* Espace en haut du menu hamburger */
+    height: 60%;
+    max-height: 500px;
+    padding: 0 1.5em;
+    margin: 70px 0px 0px 0px;
   }
 
   .nav-liens li a {

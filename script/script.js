@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fonction pour copier l'email dans le presse-papiers
 function copierEmail() {
-  const email = 'osiris62100@hotmail.fr';
+  const email = 'louis.amedro@outlook.fr';
   navigator.clipboard.writeText(email).then(() => {
     const email = document.getElementById('message-email-copie');
     email.classList.add('show');

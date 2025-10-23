@@ -63,14 +63,14 @@ Testeurs :
 
 .email-copie {
   visibility: hidden;
-  background-color: var(--jaune-clair, #333);
+  background-color: var(--jaune, #333);
   color: var(--bleu-clair);
   text-align: center;
   border-radius: 8px;
   padding: 6px 12px;
-  position: fixed; /* Changement ici */
+  position: fixed;
   left: 50%;
-  bottom: 40px; /* Décalé du bas de la fenêtre */
+  bottom: 40px;
   transform: translateX(-50%);
   z-index: 2000;
   font-weight: bold;

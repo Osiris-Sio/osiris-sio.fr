@@ -57,6 +57,15 @@ article p {
   border-left: none;
 }
 
+.actu ul {
+  margin: 0px;
+}
+
+.actu ul li {
+  font-size: 20px;
+  text-align: left;
+}
+
 /* Images et vidéos dans les actus */
 .actu img,
 .actu iframe {

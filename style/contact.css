@@ -133,6 +133,10 @@ textarea {
   min-height: 100px;
 }
 
+#linkedin:hover {
+  border-color: var(--bleu-clair);
+}
+
 @media screen and (max-width: 1200px) {
   .communication {
     flex-direction: column;

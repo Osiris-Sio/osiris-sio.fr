@@ -51,7 +51,6 @@ article p {
 article img {
   width: 25%;
   height: auto;
-  border-radius: 10px;
   margin: 20px 0;
   border: var(--jaune) 2px solid;
 }
@@ -73,11 +72,15 @@ article a {
   text-decoration: none;
 }
 
+article a:hover {
+  text-decoration: underline;
+}
+
 article img,
 iframe {
   width: 25%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 20px 0;
   border: var(--jaune) 4px solid;
   width: 30%;
@@ -91,10 +94,13 @@ iframe:hover {
   transform: scale(1.03);
 }
 
+.contour-bleu:hover {
+  border-color: var(--bleu-clair);
+}
+
 iframe {
   width: 560px;
   height: 315px;
-  border-radius: 10px;
 }
 
 /* Réseaux */

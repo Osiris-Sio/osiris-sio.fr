@@ -24,7 +24,7 @@ Testeurs :
 .actualites {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-  gap: 30px; /* espace entre les blocs */
+  gap: 15px; /* espace entre les blocs */
 }
 
 /* Style des titres */
@@ -48,7 +48,7 @@ Testeurs :
   flex-direction: column;
   gap: 0.8em;
   animation: animation_arrivee 1s ease-out;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 article p {
@@ -69,10 +69,8 @@ article p {
 /* Images et vidéos dans les actus */
 .actu img,
 .actu iframe {
-  width: 100%;
+  width: 98%;
   height: auto;
-  border-radius: 6px;
-  border: 2px solid var(--jaune);
   transition: transform 0.3s ease-in-out;
   margin-top: auto; /* pousse l'image ou la vidéo en bas */
 }
@@ -102,8 +100,18 @@ iframe:hover {
 
 /* Responsive */
 @media (max-width: 950px) {
+  .actu {
+    margin-top: 0px;
+  }
+
+  .actu img,
+  .actu iframe {
+    margin-bottom: 0px;
+  }
+
   .actualites {
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 10px;
   }
 }
 

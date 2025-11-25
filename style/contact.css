@@ -49,7 +49,6 @@ Testeurs :
 }
 
 .communication img:hover {
-  border-color: var(--blanc);
   transform: scale(1.05);
   cursor: pointer;
 }

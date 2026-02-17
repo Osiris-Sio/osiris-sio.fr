@@ -1,15 +1,13 @@
 /*
-Auteurs :
+Auteur :
   - Louis AMEDRO (alias Osiris Sio)
-  - Chloé LEFETZ
 
 Testeurs :
   - Jules HERBAUX
   - Marylou LAPÔTRE
 
-© 2025 Osiris Sio – Tous droits réservés.
+© 2026 Osiris Sio – Tous droits réservés.
 */
-
 /* Couleurs */
 :root {
   --bleu: #001a46;
@@ -21,81 +19,91 @@ Testeurs :
   --gris: #444647;
 }
 
-.communication {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5em;
-  overflow: hidden;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5em;
+  padding: 5em 2em 4em 2em;
 }
 
-.communication a {
-  display: block;
-  width: 20%;
-  max-width: 100%;
-}
-
-.communication img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.carrousel-container {
-  overflow: hidden;
-  width: 100%;
+.project-card {
   background-color: var(--gris);
-  padding: 20px 0;
-  margin: 20px 0;
-}
-
-.carrousel-slider {
+  border-radius: 15px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 3px solid var(--jaune);
   display: flex;
-  gap: 30px;
-  animation: defilement 30s linear infinite;
+  flex-direction: column;
 }
 
-.carrousel-slider a:hover img {
-  transform: scale(1.1);
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: var(--blanc);
 }
 
-.carrousel-slider img {
-  width: auto;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
-  transition: transform 0.3s;
+.project-card img {
+  width: 100% !important; /* Force l'annulation du 25% de style.css */
+  height: 200px;
+  object-fit: cover;
+  border: none;
+  border-bottom: 3px solid var(--jaune);
+  margin: 0;
+  border-radius: 0;
+  transition: none;
 }
 
-/* Animation pour le défilement des images */
-@keyframes defilement {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-125%);
-  }
+.project-card img:hover {
+  transform: none;
+  cursor: default;
+}
+
+.project-info {
+  padding: 1em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info h3 {
+  color: var(--jaune);
+  margin: 0 0 0.5em 0;
+  font-size: 1.6em;
+}
+
+.project-info .project-desc {
+  font-size: 1.1em;
+  border-left: none; /* Annule le style global des paragraphes */
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  text-align: left;
+  color: var(--blanc);
+}
+
+.btn-project {
+  display: inline-block;
+  background-color: var(--jaune);
+  color: var(--bleu) !important;
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-project:hover {
+  background-color: var(--blanc);
+  text-decoration: none;
 }
 
 /* Responsive styles */
 @media screen and (max-width: 880px) {
-  .communication {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-
-  .communication a {
-    width: 70%;
-  }
-
-  @keyframes defilement {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-500%);
-    }
+  .projects-grid {
+    padding: 1em;
+    gap: 2em;
   }
 }

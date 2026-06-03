@@ -14,11 +14,20 @@ Testeurs :
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Découvrez les projets de développement et les créations de jeux vidéo réalisés par Osiris Sio." />
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Mes Projets - Osiris Sio" />
+    <meta property="og:description" content="Découvrez les projets de développement et les créations de jeux vidéo réalisés par Osiris Sio." />
+    <meta property="og:image" content="https://osiris-sio.fr/img/logo.png" />
+    <meta property="og:url" content="https://osiris-sio.fr/projets.html" />
+    <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/projets.css" />
 
     <script src="script/script.js"></script>
+    <script src="script/projects.js"></script>
 
     <link rel="icon" href="/img/logo.png" type="image/png" />
 
@@ -34,60 +43,171 @@ Testeurs :
     <div id="header"></div>
 
     <article>
-      <h2>Mes projets (À la Une)</h2>
+      <h2>Mes projets</h2>
 
       <p>
-        Bienvenue dans mon univers créatif ! Vous retrouverez mes jeux sur
-        itch.io, et mes autres projets de développement sur GitHub. Je conçois
-        également des cartes dans le mode créatif de Fortnite. Certains projets
-        sont réalisés seuls, d'autres en collaboration avec des amis ou membres
-        de la communauté.
+        Bienvenue dans mon portfolio ! Voici l'ensemble des projets sur lesquels j'ai pu travailler. Vous pouvez utiliser les filtres ci-dessous pour trier par année ou voir mes projets favoris.
       </p>
 
-      <div class="communication">
-        <a href="https://osiris-sio.itch.io/" target="_blank"
-          ><img src="img/itch.io.png" alt="Itch.io"
-        /></a>
-        <a href="https://www.fortnite.com/@osiris_sio" target="_blank"
-          ><img src="img/fortnite.png" alt="Fortnite"
-        /></a>
-        <a href="https://github.com/Osiris-Sio" target="_blank"
-          ><img src="img/github.png" alt="GitHub"
-        /></a>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="featured">À la Une</button>
+        <button class="filter-btn" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="2026">2026</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
       </div>
 
       <div class="projects-grid">
-        <div class="project-card">
-          <img src="img/md1.png" alt="Medieval Heroes" />
+        <!-- 2026 -->
+        <div class="project-card" data-year="2026" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/freebridge.png" alt="Stage Freebridge.fr" />
           <div class="project-info">
-            <h3>Medieval Heroes</h3>
+            <h3>Stage Freebridge.fr <br>(Full-stack PHP)</h3>
             <p class="project-desc">
-              Découvrez Medieval Heroes, un jeu de plateau innovant mêlant
-              stratégie, action et suspense ! Affrontez vos amis en local ou
-              défiez un robot dans des batailles épiques.
+              Refonte du site web, création d'une application de Bridge et intégration d'une charte graphique.
             </p>
-            <a href="https://osiris-sio.itch.io/medieval-heroes" target="_blank" class="btn-project">Voir sur Itch.io</a>
+            <a href="https://www.freebridge.fr" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir le site</a>
+            <a href="https://github.com/Osiris-Sio/Freebridge" target="_blank" class="btn-project">Voir sur GitHub</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-year="2026" data-featured="true">
+          <img src="img/tcg-pokemon.avif" alt="TCG Pokémon" />
+          <div class="project-info">
+            <h3>TCG Pokémon (Node.Js/Vue.Js)</h3>
+            <p class="project-desc">
+              Conception d’un jeu de cartes Pokémon avec un backend Node.Js (API) et un frontend sous Vue.Js. (SPA)
+            </p>
+            <a href="https://github.com/Osiris-Sio/TCG-API-Pokemon" target="_blank" class="btn-project" style="margin-bottom: 10px;">Projet API</a>
+            <a href="https://github.com/Osiris-Sio/tcg-spa-Louis-Amedro" target="_blank" class="btn-project">Projet SPA</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2026" data-featured="true">
+          <img src="img/sae-web-api.png" alt="ValOracle / SAE Web API" />
+          <div class="project-info">
+            <h3>ValOracle - SAE Web API <br>(Gestion de Projet)</h3>
+            <p class="project-desc">
+              Conception d’un site web (PHP) permettant de réaliser des prédictions sur des données Valorant (PostgreSQL), en équipe de 3. Ces deux parties sont liées à une API (Node.Js).
+            </p>
+            <a href="https://sae-devapigrp6.jrcan.dev/" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir le site</a>
+            <a href="https://github.com/Osiris-Sio/SAE-Web-API_03-2026/tree/master" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2026" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/site-osirissio.png" alt="Site Personnel" />
+          <div class="project-info">
+            <h3>Site Personnel (HTML/CSS/JS)</h3>
+            <p class="project-desc">
+              Découvrez un espace dédié à la création, au partage et à l’innovation. Sur ce site, vous pouvez explorer mes projets, en apprendre plus sur mon parcours et me contacter facilement.
+            </p>
+            <a href="https://osiris-sio.fr/" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir le site</a>
+            <a href="https://github.com/Osiris-Sio/osiris-sio.fr" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2026" data-featured="true">
           <img src="img/bc1.png" alt="Ball Challenge" />
           <div class="project-info">
-            <h3>Ball Challenge</h3>
+            <h3>Ball Challenge (Python)</h3>
             <p class="project-desc">
               🏐 Esquivez les balles <br />
               🪙 Collectez des pièces <br />
               👾 Graphismes rétro <br />
-              🕹️ Facile à jouer, difficile à maîtriser <br />
+              🕹️ Facile à jouer, difficile à maîtriser
             </p>
-            <a href="https://osiris-sio.itch.io/ball-challenge" target="_blank" class="btn-project">Voir sur Itch.io</a>
+            <a href="https://osiris-sio.itch.io/ball-challenge" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir sur Itch.io</a>
+            <a href="https://github.com/Osiris-Sio/Ball-Challenge" target="_blank" class="btn-project">Voir sur GitHub</a>
           </div>
         </div>
 
-        <div class="project-card">
-          <img src="img/mzwo1.jpg" alt="Fortnite" />
+        <!-- 2025 -->
+        <div class="project-card" data-year="2025" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/sae-sockets.png" alt="SAE Sockets" />
           <div class="project-info">
-            <h3>Fortnite</h3>
+            <h3>SAE Sockets (C/Réseaux)</h3>
+            <p class="project-desc">
+              Conception du jeu du Pendu en réseau local en C sous plusieurs versions, en équipe de 4.
+            </p>
+            <a href="https://github.com/Osiris-Sio/SAE-Sockets_12-2025" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2025" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/sae-algo-graphes.png" alt="SAE IHM" />
+          <div class="project-info">
+            <h3>SAE IHM (Python)</h3>
+            <p class="project-desc">
+              Conception d’une application PyQt permettant de positionner les articles sur un plan de magasin et d’en tracer un chemin le plus court pour collecter les produits d’une liste.
+            </p>
+            <a href="https://github.com/Osiris-Sio/SAE_S2-Algo_graphes" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2025" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/undercave.png" alt="UnderCave" />
+          <div class="project-info">
+            <h3>UnderCave (C)</h3>
+            <p class="project-desc">
+              Un RPG narratif codé en C où chaque choix compte. Explorez une caverne mystérieuse, affrontez des monstres et brisez la malédiction du village.
+            </p>
+            <a href="https://osiris-sio.itch.io/undercave" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir sur Itch.io</a>
+            <a href="https://github.com/Osiris-Sio/UnderCave" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2025" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/sae-web-html.png" alt="SAE Web" />
+          <div class="project-info">
+            <h3>SAE Web (HTML/CSS)</h3>
+            <p class="project-desc">
+              Conception d’un site web statique sur l’escrime française aux Jeux Olympiques 2024, en équipe de 4.
+            </p>
+            <a href="https://projets.jrcan.dev/sabre-olympique/" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir le site</a>
+            <a href="https://github.com/Osiris-Sio/SAE-Web_01-2025" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2025" data-featured="true">
+          <img src="img/lim1.jpg" alt="Code Game Jam" />
+          <div class="project-info">
+            <h3>Lost in Melody <br>(Gestion de Projet)</h3>
+            <p class="project-desc">
+              Explorez les plateformes à la recherche de partitions ou de mélodies apaisantes pour chasser cet air obsédant !
+            </p>
+            <a href="https://osiris-sio.itch.io/lost-in-melody" target="_blank" class="btn-project">Voir sur Itch.io</a>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="project-card" data-year="2024" data-featured="true">
+          <img src="img/md1.png" alt="Medieval Heroes" />
+          <div class="project-info">
+            <h3>Medieval Heroes (Python)</h3>
+            <p class="project-desc">
+              Découvrez Medieval Heroes, un jeu de plateau innovant mêlant stratégie, action et suspense ! Affrontez vos amis en local ou défiez un robot dans des batailles épiques.
+            </p>
+            <a href="https://osiris-sio.itch.io/medieval-heroes" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir sur Itch.io</a>
+            <a href="https://github.com/Osiris-Sio/Medieval_Heroes" target="_blank" class="btn-project">Voir sur GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2024" data-featured="false" style="display: none; opacity: 0; transform: scale(0.9);">
+          <img src="img/fm1.png" alt="Fast Maze" />
+          <div class="project-info">
+            <h3>Fast Maze (Python)</h3>
+            <p class="project-desc">
+              Plongez dans l'excitation de l'aventure avec Fast Maze, un jeu captivant où votre réflexion est honorée dans un petit labyrinthe !
+            </p>
+            <a href="https://osiris-sio.itch.io/fast-maze" target="_blank" class="btn-project">Voir sur Itch.io</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-year="2024" data-featured="true">
+          <img src="img/mzwo1.jpg" alt="Mini Zone Wars OG" />
+          <div class="project-info">
+            <h3>Mini Zone Wars OG </h3>
             <p class="project-desc">
               🔫 Armes du Chapitre 1 <br />
               🗺️ Mini carte du Chapitre 1 <br />
@@ -98,50 +218,12 @@ Testeurs :
           </div>
         </div>
 
-        <div class="project-card">
-          <img src="img/lim1.jpg" alt="Code Game Jam" />
-          <div class="project-info">
-            <h3>Code Game Jam</h3>
-            <p class="project-desc">
-              Explorez les plateformes à la recherche de partitions ou de
-              mélodies apaisantes pour chasser cet air obsédant !
-            </p>
-            <a href="https://osiris-sio.itch.io/lost-in-melody" target="_blank" class="btn-project">Voir sur Itch.io</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="img/tcg-pokemon.avif" alt="TCG Pokémon" />
-          <div class="project-info">
-            <h3>TCG Pokémon</h3>
-            <p class="project-desc">
-              Conception d’un jeu de cartes Pokémon avec un backend Node.Js (API) et un frontend sous Vue.Js. (SPA) (Ce projet est toujours en cours)
-            </p>
-            <a href="https://github.com/Osiris-Sio/TCG-API-Pokemon" target="_blank" class="btn-project" style="margin-bottom: 10px;">Projet API</a>
-            <a href="https://github.com/Osiris-Sio/tcg-spa-Louis-Amedro" target="_blank" class="btn-project">Projet SPA</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="img/sae-web-api.png" alt="ValOracle" />
-          <div class="project-info">
-            <h3>ValOracle</h3>
-            <p class="project-desc">
-              Conception d’un site web (PHP) permettant de réaliser des prédictions sur des données Valorant (PostgreSQL), en équipe de 3. Ces deux parties sont liées à une API (Node.Js).
-            </p>
-            <a href="https://sae-devapigrp6.jrcan.dev/" target="_blank" class="btn-project" style="margin-bottom: 10px;">Voir le site</a>
-            <a href="https://github.com/Osiris-Sio/SAE-Web-API_03-2026/tree/master" target="_blank" class="btn-project">Voir sur GitHub</a>
-          </div>
-        </div>
-
-        <div class="project-card">
+        <div class="project-card" data-year="2024" data-featured="true">
           <img src="img/shooting-crab.png" alt="Shooting Crab" />
           <div class="project-info">
-            <h3>Shooting Crab</h3>
+            <h3>Shooting Crab (Python)</h3>
             <p class="project-desc">
-              Mon tout premier jeu ! Un shooter rétro avec des crabes robots,
-              jouable en solo ou en coop locale. Simple à prendre en main, mais
-              difficile à maîtriser.
+              Mon tout premier jeu ! Un shooter rétro avec des crabes robots, jouable en solo ou en coop locale. Simple à prendre en main, mais difficile à maîtriser.
             </p>
             <a href="https://osiris-sio.itch.io/shooting-crab" target="_blank" class="btn-project">Voir sur Itch.io</a>
           </div>

@@ -13,12 +13,19 @@ Testeurs :
 fetch('header.html')
   .then((response) => response.text())
   .then((data) => {
-    document.getElementById('header').innerHTML = data;
+    const headerEl = document.getElementById('header');
+    headerEl.innerHTML = data;
+    // Ajout de la classe loaded pour l'apparition en fondu (évite le FOUC)
+    requestAnimationFrame(() => headerEl.classList.add('loaded'));
     initBurgerMenu();
   });
 fetch('footer.html')
   .then((response) => response.text())
-  .then((data) => (document.getElementById('footer').innerHTML = data));
+  .then((data) => {
+    const footerEl = document.getElementById('footer');
+    footerEl.innerHTML = data;
+    requestAnimationFrame(() => footerEl.classList.add('loaded'));
+  });
 
 // Gestion de la classe 'compact' sur le menu au scroll
 window.addEventListener('scroll', function () {

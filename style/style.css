@@ -46,6 +46,15 @@ article {
   flex: 1;
 }
 
+#header, #footer {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#header.loaded, #footer.loaded {
+  opacity: 1;
+}
+
 article a {
   color: var(--jaune-clair);
   text-decoration: none;

@@ -20,6 +20,34 @@ Testeurs :
   transition: background-color 0.3s ease;
 }
 
+/* Filtres de projets */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.filter-btn {
+  background-color: var(--bleu-fonce);
+  border: 2px solid var(--jaune);
+  border-radius: 20px;
+  color: var(--blanc);
+  cursor: pointer;
+  font-family: var(--font-nunito), 'Nunito', sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--jaune);
+  color: var(--bleu-fonce);
+}
+
 .project-card {
   background-color: var(--gris);
   border-radius: 15px;
@@ -27,6 +55,7 @@ Testeurs :
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {

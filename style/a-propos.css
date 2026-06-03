@@ -10,15 +10,15 @@ Testeurs :
 */
 
 article {
-  max-width: 1000px;
-  width: calc(100% - 40px);
-  margin: 10px auto;
-  padding: 20px;
-  box-sizing: border-box;
+  animation: apparition_bas 1s ease-in;
   background-color: #2c2f33;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: apparition_bas 1s ease-in;
+  box-sizing: border-box;
+  margin: 10px auto;
+  max-width: 1000px;
+  padding: 20px;
+  width: calc(100% - 40px);
 }
 
 @keyframes apparition_bas {
@@ -33,15 +33,74 @@ article {
 }
 
 h2 {
-  text-align: center;
   font-size: 32px;
-  margin: 70px 10px 0px 10px;
+  margin: 40px 10px 0px 10px;
+  text-align: center;
 }
 
 p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 25px;
+}
+
+/* Container du profil */
+.profil-container {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.profil-img {
+  border: none;
+  height: 180px;
+  object-fit: cover;
+  width: 180px;
+}
+
+.profil-text {
+  flex: 1;
+}
+
+/* Grille de compétences */
+.skills-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-top: 20px;
+}
+
+.skill-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.skill-item img {
+  border-radius: 0;
+  border: none;
+  height: 60px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  width: 60px;
+}
+
+.skill-item span {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+article img:hover {
+  cursor: default;
+  transform: none;
+}
+
+.skill-item:hover {
+  transform: none;
 }
 
 @media (max-width: 768px) {
@@ -51,5 +110,14 @@ p {
 
   h2 {
     font-size: 1.5rem;
+  }
+  
+  .profil-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }

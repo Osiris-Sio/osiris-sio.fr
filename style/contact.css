@@ -9,64 +9,66 @@ Testeurs :
 © 2026 Osiris Sio – Tous droits réservés.
 */
 
-/* Couleurs */
-:root {
-  --bleu: #001a46;
-  --bleu-clair: #007bff;
-  --jaune: #ffd100;
-  --jaune-clair: #fffa8c;
-  --blanc: #ffffff;
-  --gris-fonce: #23272a;
-  --gris: #444647;
-}
-
-/* Forcer l'utilisation de la police Nunito */
-* {
-  font-family: 'Nunito', sans-serif;
-}
-
-.image-email {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .email-copie {
-  visibility: hidden;
   background-color: var(--jaune, #333);
-  color: var(--bleu-clair);
-  text-align: center;
   border-radius: 8px;
+  bottom: 40px;
+  color: var(--bleu-clair);
+  font-weight: bold;
+  left: 50%;
+  opacity: 0;
   padding: 6px 12px;
   position: fixed;
-  left: 50%;
-  bottom: 40px;
+  text-align: center;
   transform: translateX(-50%);
-  z-index: 2000;
-  font-weight: bold;
-  white-space: nowrap;
-  opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 2000;
 }
 
 .email-copie.show {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 .form-contact {
+  background: var(--gris);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 600px;
   margin: auto;
-  padding: 20px;
-  background-color: var(--bleu);
-  background: var(--gris);
-  padding: 1rem;
   margin-bottom: 1.5rem;
-  border-radius: 10px;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.form-contact button {
+  background-color: var(--jaune);
+  border-radius: 5px;
+  border: 4px solid var(--jaune);
+  color: var(--bleu);
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 12px;
+  transition: background-color 0.3s;
+  font-family: var(--font-nunito);
+}
+
+.form-contact button:hover {
+  background-color: var(--blanc);
+}
+
+.form-contact input,
+.form-contact textarea {
+  background-color: var(--blanc);
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  font-family: var(--font-nunito);
 }
 
 .form-contact label {
@@ -74,36 +76,14 @@ Testeurs :
   font-weight: bold;
 }
 
-.form-contact input,
-.form-contact textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  background-color: var(--blanc);
-}
-
-.form-contact button {
-  padding: 12px;
-  font-size: 1em;
-  font-weight: bold;
-  background-color: var(--jaune);
-  color: var(--bleu);
-  border: 4px solid var(--jaune);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form-contact button:hover {
-  background-color: var(--blanc);
+.image-email {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 textarea {
-  resize: none;
   min-height: 100px;
-}
-
-#linkedin:hover {
-  border-color: var(--bleu-clair);
+  resize: none;
 }

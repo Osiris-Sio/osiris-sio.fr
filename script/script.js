@@ -1,7 +1,6 @@
 /*
 Auteurs :
   - Louis AMEDRO (alias Osiris Sio)
-  - Chloé LEFETZ
 
 Testeurs :
   - Jules HERBAUX
@@ -14,12 +13,19 @@ Testeurs :
 fetch('header.html')
   .then((response) => response.text())
   .then((data) => {
-    document.getElementById('header').innerHTML = data;
+    const headerEl = document.getElementById('header');
+    headerEl.innerHTML = data;
+    // Ajout de la classe loaded pour l'apparition en fondu (évite le FOUC)
+    requestAnimationFrame(() => headerEl.classList.add('loaded'));
     initBurgerMenu();
   });
 fetch('footer.html')
   .then((response) => response.text())
-  .then((data) => (document.getElementById('footer').innerHTML = data));
+  .then((data) => {
+    const footerEl = document.getElementById('footer');
+    footerEl.innerHTML = data;
+    requestAnimationFrame(() => footerEl.classList.add('loaded'));
+  });
 
 // Gestion de la classe 'compact' sur le menu au scroll
 window.addEventListener('scroll', function () {
@@ -37,32 +43,59 @@ function initBurgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
   if (burger && nav) {
+    // Active l'animation seulement un peu après le chargement pour éviter le glissement initial
+    setTimeout(() => {
+      nav.classList.add('transition-ready');
+    }, 100);
+
     burger.addEventListener('click', function () {
+      nav.classList.add('transition-ready'); // S'assure que la transition est active
       nav.classList.toggle('open');
       burger.classList.toggle('open');
       // Ajoute ou retire la classe menu-open sur le body - Animation
       if (nav.classList.contains('open')) {
-        nav.style.left = '0';
-        nav.style.transform = 'translateX(0)';
         document.body.classList.add('menu-open');
       } else {
-        // Menu fermé → glisse vers la droite
-        nav.style.transform = 'translateX(-100%)';
-        setTimeout(() => {
-          nav.style.left = '-100%'; // remet hors écran à gauche
-          nav.style.transform = 'translateX(0)';
-        }, 500); // doit correspondre à la durée de transition CSS
         document.body.classList.remove('menu-open');
       }
     });
-    // Fermer le menu quand on clique sur un lien
+    // Gestion du clic sur "Projets" pour le menu déroulant
+    const dropdownToggle = nav.querySelector('.dropdown-toggle');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownToggle.parentElement.classList.toggle('open');
+      });
+    }
+
+    // Fermer le menu quand on clique sur un lien (sauf le menu déroulant)
     nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
+      if (!link.classList.contains('dropdown-toggle')) {
+        link.addEventListener('click', () => {
+          nav.classList.remove('transition-ready'); // Désactive l'animation instantanément
+          nav.classList.remove('open');
+          burger.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          // On peut aussi refermer le sous-menu
+          if (dropdownToggle) {
+            dropdownToggle.parentElement.classList.remove('open');
+          }
+        });
+      }
+    });
+
+    // Fermer le menu quand on clique sur le fond (backdrop)
+    const backdrop = document.querySelector('.menu-backdrop');
+    if (backdrop) {
+      backdrop.addEventListener('click', () => {
         nav.classList.remove('open');
         burger.classList.remove('open');
         document.body.classList.remove('menu-open');
+        if (dropdownToggle) {
+          dropdownToggle.parentElement.classList.remove('open');
+        }
       });
-    });
+    }
   }
 }
 

@@ -99,6 +99,10 @@ footer {
   width: 32px;
 }
 
+.social-icons img.no-filter {
+  filter: none;
+}
+
 /* Barre du bas (Copyright & Légal) */
 .footer-bas {
   align-items: center;

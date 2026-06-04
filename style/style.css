@@ -46,12 +46,14 @@ article {
   flex: 1;
 }
 
-#header, #footer {
+#header,
+#footer {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
 
-#header.loaded, #footer.loaded {
+#header.loaded,
+#footer.loaded {
   opacity: 1;
 }
 
@@ -159,7 +161,7 @@ img.contour-bleu:hover {
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   article .reseaux div {
     margin: 20px 30px;
   }
@@ -172,11 +174,11 @@ img.contour-bleu:hover {
   }
 
   .communication a {
-    width: 30%;
+    width: 50%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 870px) {
   article h2 {
     font-size: 22px;
   }
@@ -186,10 +188,6 @@ img.contour-bleu:hover {
     font-size: 18px;
     margin-left: 5px;
     padding-left: 10px;
-  }
-
-  .communication a {
-    width: 70%;
   }
 
   .fond-logo {
@@ -217,12 +215,16 @@ img.contour-bleu:hover {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   .fond-logo {
     width: 100%;
   }
 
   iframe {
     width: 100%;
+  }
+
+  .communication a {
+    width: 80%;
   }
 }

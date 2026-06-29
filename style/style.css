@@ -216,12 +216,9 @@ img.contour-bleu:hover {
 }
 
 @media (max-width: 600px) {
-  .fond-logo {
-    width: 100%;
-  }
-
+  .fond-logo,
   iframe {
-    width: 100%;
+    width: 90%;
   }
 
   .communication a {

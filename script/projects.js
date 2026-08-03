@@ -1,3 +1,10 @@
+/*
+Auteur :
+  - Louis AMEDRO (alias Osiris Sio)
+
+© 2026 Osiris Sio - Tous droits réservés.
+*/
+
 // Initialisation des filtres de projets
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');

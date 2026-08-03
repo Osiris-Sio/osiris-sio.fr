@@ -2,11 +2,7 @@
 Auteur :
   - Louis AMEDRO (alias Osiris Sio)
 
-Testeurs :
-  - Jules HERBAUX
-  - Marylou LAPÔTRE
-
-© 2026 Osiris Sio – Tous droits réservés.
+© 2026 Osiris Sio - Tous droits réservés.
 */
 
 /* Variables Globales (Couleurs et Transitions) */
@@ -44,17 +40,6 @@ body {
    ========================================================================== */
 article {
   flex: 1;
-}
-
-#header,
-#footer {
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-#header.loaded,
-#footer.loaded {
-  opacity: 1;
 }
 
 article a {

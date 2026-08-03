@@ -1,12 +1,8 @@
 /*
-Auteurs :
+Auteur :
   - Louis AMEDRO (alias Osiris Sio)
 
-Testeurs :
-  - Jules HERBAUX
-  - Marylou LAPÔTRE
-
-© 2025 Osiris Sio – Tous droits réservés.
+© 2026 Osiris Sio - Tous droits réservés.
 */
 
 // Chargement du header et footer
@@ -15,8 +11,6 @@ fetch('header.html')
   .then((data) => {
     const headerEl = document.getElementById('header');
     headerEl.innerHTML = data;
-    // Ajout de la classe loaded pour l'apparition en fondu (évite le FOUC)
-    requestAnimationFrame(() => headerEl.classList.add('loaded'));
     initBurgerMenu();
   });
 fetch('footer.html')
@@ -24,7 +18,6 @@ fetch('footer.html')
   .then((data) => {
     const footerEl = document.getElementById('footer');
     footerEl.innerHTML = data;
-    requestAnimationFrame(() => footerEl.classList.add('loaded'));
   });
 
 // Gestion de la classe 'compact' sur le menu au scroll

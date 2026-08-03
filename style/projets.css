@@ -2,11 +2,7 @@
 Auteur :
   - Louis AMEDRO (alias Osiris Sio)
 
-Testeurs :
-  - Jules HERBAUX
-  - Marylou LAPÔTRE
-
-© 2026 Osiris Sio – Tous droits réservés.
+© 2026 Osiris Sio - Tous droits réservés.
 */
 
 .btn-project {
@@ -55,7 +51,10 @@ Testeurs :
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .project-card img {
@@ -112,7 +111,6 @@ Testeurs :
   transform: none;
   border-bottom: 3px solid var(--jaune);
 }
-
 
 /* Responsive styles */
 @media screen and (max-width: 880px) {

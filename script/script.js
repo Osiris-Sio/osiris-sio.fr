@@ -6,19 +6,37 @@ Auteur :
 */
 
 // Chargement du header et footer
-fetch('header.html')
-  .then((response) => response.text())
-  .then((data) => {
-    const headerEl = document.getElementById('header');
-    headerEl.innerHTML = data;
-    initBurgerMenu();
-  });
-fetch('footer.html')
-  .then((response) => response.text())
-  .then((data) => {
-    const footerEl = document.getElementById('footer');
-    footerEl.innerHTML = data;
-  });
+function chargerHeaderEtFooter() {
+  fetch('header.html')
+    .then((response) => response.text())
+    .then((data) => {
+      const headerEl = document.getElementById('header');
+      if (headerEl) {
+        // Si le header existe, on ajoute le contenu du header
+        headerEl.innerHTML = data;
+        initBurgerMenu();
+      }
+    });
+
+  fetch('footer.html')
+    .then((response) => response.text())
+    .then((data) => {
+      const footerEl = document.getElementById('footer');
+      if (footerEl) {
+        // Si le footer existe, on ajoute le contenu du footer
+        footerEl.innerHTML = data;
+      }
+    });
+}
+
+// Si le document est en cours de chargement
+if (document.readyState === 'loading') {
+  // On attend qu'il soit complètement chargé, puis on charge le header et footer
+  document.addEventListener('DOMContentLoaded', chargerHeaderEtFooter);
+} else {
+  // Sinon on charge directement le header et footer
+  chargerHeaderEtFooter();
+}
 
 // Gestion de la classe 'compact' sur le menu au scroll
 window.addEventListener('scroll', function () {

@@ -6,10 +6,11 @@ Auteur :
 */
 
 .email-copie {
-  background-color: var(--jaune, #333);
+  background-color: var(--jaune);
   border-radius: 8px;
   bottom: 40px;
-  color: var(--bleu-clair);
+  color: var(--bleu-fonce);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-weight: bold;
   left: 50%;
   opacity: 0;
@@ -21,6 +22,27 @@ Auteur :
   visibility: hidden;
   white-space: nowrap;
   z-index: 2000;
+}
+
+.btn-copy-email {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  width: 25%;
+}
+
+@media (max-width: 900px) {
+  .btn-copy-email {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-copy-email {
+    width: 80%;
+  }
 }
 
 .email-copie.show {

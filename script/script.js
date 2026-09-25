@@ -8,46 +8,56 @@ Auteur :
 // Chargement du header et footer
 function chargerHeaderEtFooter() {
   fetch('header.html')
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
+      return response.text();
+    })
     .then((data) => {
       const headerEl = document.getElementById('header');
       if (headerEl) {
-        // Si le header existe, on ajoute le contenu du header
         headerEl.innerHTML = data;
         initBurgerMenu();
+        mettreEnValeurLienActif();
       }
-    });
+    })
+    .catch((err) => console.error('Impossible de charger header.html :', err));
 
   fetch('footer.html')
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
+      return response.text();
+    })
     .then((data) => {
       const footerEl = document.getElementById('footer');
       if (footerEl) {
-        // Si le footer existe, on ajoute le contenu du footer
         footerEl.innerHTML = data;
       }
-    });
+    })
+    .catch((err) => console.error('Impossible de charger footer.html :', err));
 }
 
-// Si le document est en cours de chargement
+// Mise en valeur du lien de la page courante dans la barre de navigation
+function mettreEnValeurLienActif() {
+  const pageCourante =
+    window.location.pathname.split('/').pop() || 'index.html';
+  const liens = document.querySelectorAll('.nav-liens a');
+  liens.forEach((lien) => {
+    const href = lien.getAttribute('href');
+    if (
+      href === pageCourante ||
+      (pageCourante === '' && href === 'index.html')
+    ) {
+      lien.classList.add('actif');
+    }
+  });
+}
+
+// Lancement au chargement du DOM
 if (document.readyState === 'loading') {
-  // On attend qu'il soit complètement chargé, puis on charge le header et footer
   document.addEventListener('DOMContentLoaded', chargerHeaderEtFooter);
 } else {
-  // Sinon on charge directement le header et footer
   chargerHeaderEtFooter();
 }
-
-// Gestion de la classe 'compact' sur le menu au scroll
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('#menu');
-  if (!header) return;
-  if (window.scrollY > 425) {
-    header.classList.add('compact');
-  } else {
-    header.classList.remove('compact');
-  }
-});
 
 // Initialisation du menu burger
 function initBurgerMenu() {
@@ -60,39 +70,27 @@ function initBurgerMenu() {
     }, 100);
 
     burger.addEventListener('click', function () {
-      nav.classList.add('transition-ready'); // S'assure que la transition est active
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-      // Ajoute ou retire la classe menu-open sur le body - Animation
-      if (nav.classList.contains('open')) {
+      nav.classList.add('transition-ready');
+      const isOpen = nav.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      if (isOpen) {
         document.body.classList.add('menu-open');
       } else {
         document.body.classList.remove('menu-open');
       }
     });
-    // Gestion du clic sur "Projets" pour le menu déroulant
-    const dropdownToggle = nav.querySelector('.dropdown-toggle');
-    if (dropdownToggle) {
-      dropdownToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        dropdownToggle.parentElement.classList.toggle('open');
-      });
-    }
 
-    // Fermer le menu quand on clique sur un lien (sauf le menu déroulant)
+    // Fermer le menu quand on clique sur un lien
     nav.querySelectorAll('a').forEach((link) => {
-      if (!link.classList.contains('dropdown-toggle')) {
-        link.addEventListener('click', () => {
-          nav.classList.remove('transition-ready'); // Désactive l'animation instantanément
-          nav.classList.remove('open');
-          burger.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          // On peut aussi refermer le sous-menu
-          if (dropdownToggle) {
-            dropdownToggle.parentElement.classList.remove('open');
-          }
-        });
-      }
+      link.addEventListener('click', () => {
+        nav.classList.remove('transition-ready');
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      });
     });
 
     // Fermer le menu quand on clique sur le fond (backdrop)
@@ -101,10 +99,8 @@ function initBurgerMenu() {
       backdrop.addEventListener('click', () => {
         nav.classList.remove('open');
         burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('menu-open');
-        if (dropdownToggle) {
-          dropdownToggle.parentElement.classList.remove('open');
-        }
       });
     }
   }
@@ -128,12 +124,40 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Affichage de la confirmation visuelle de copie
+function afficherConfirmationEmail() {
+  const notif = document.getElementById('message-email-copie');
+  if (!notif) return;
+  notif.classList.add('show');
+  setTimeout(() => notif.classList.remove('show'), 2500);
+}
+
+// Fallback si Clipboard API n'est pas supporté ou restreint
+function fallbackCopierEmail(text) {
+  const input = document.createElement('textarea');
+  input.value = text;
+  input.style.position = 'fixed';
+  input.style.opacity = '0';
+  document.body.appendChild(input);
+  input.select();
+  try {
+    document.execCommand('copy');
+    afficherConfirmationEmail();
+  } catch (e) {
+    window.prompt("Copiez l'adresse e-mail :", text);
+  }
+  document.body.removeChild(input);
+}
+
 // Fonction pour copier l'email dans le presse-papiers
 function copierEmail() {
-  const email = 'louis.amedro@outlook.fr';
-  navigator.clipboard.writeText(email).then(() => {
-    const email = document.getElementById('message-email-copie');
-    email.classList.add('show');
-    setTimeout(() => email.classList.remove('show'), 2500);
-  });
+  const adresseEmail = 'louis.amedro@outlook.fr';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard
+      .writeText(adresseEmail)
+      .then(() => afficherConfirmationEmail())
+      .catch(() => fallbackCopierEmail(adresseEmail));
+  } else {
+    fallbackCopierEmail(adresseEmail);
+  }
 }

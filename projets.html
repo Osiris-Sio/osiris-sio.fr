@@ -26,45 +26,67 @@ Auteur :
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/projets.css" />
 
     <script src="script/script.js" defer></script>
     <script src="script/projects.js" defer></script>
 
-    <link rel="icon" href="/img/logo.png" type="image/png" />
+    <script
+      data-goatcounter="https://osirissio.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
 
+    <link rel="icon" href="img/logo.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Osiris Sio</title>
+    <title>Mes Projets - Osiris Sio</title>
   </head>
 
   <body>
     <div id="header"></div>
 
     <article>
-      <h2>Mes projets</h2>
+      <h1>Mes projets</h1>
 
       <p>
         Bienvenue dans mon univers créatif ! Vous retrouverez mes jeux sur
         itch.io, et mes autres projets de développement sur GitHub. Je conçois
         également des cartes dans le mode créatif de Fortnite. Certains projets
-        sont réalisés seuls, d'autres en collaboration avec des amis ou membres
-        de la communauté.
+        sont réalisés en solo, d'autres en collaboration avec des amis ou des
+        membres de la communauté.
       </p>
 
       <div class="communication">
-        <a href="https://osiris-sio.itch.io/" target="_blank"
-          ><img src="img/itch.io.png" alt="Itch.io"
-        /></a>
-        <a href="https://www.fortnite.com/@osiris_sio" target="_blank"
-          ><img src="img/fortnite.png" alt="Fortnite"
-        /></a>
-        <a href="https://github.com/Osiris-Sio" target="_blank"
-          ><img src="img/github.png" alt="GitHub"
-        /></a>
+        <a
+          href="https://osiris-sio.itch.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/itch.io.png" alt="Itch.io" />
+        </a>
+        <a
+          href="https://www.fortnite.com/@osiris_sio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/fortnite.png" alt="Fortnite" />
+        </a>
+        <a
+          href="https://github.com/Osiris-Sio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/github.png" alt="GitHub" />
+        </a>
       </div>
 
       <p>
@@ -76,7 +98,7 @@ Auteur :
 
       <div class="filters">
         <button class="filter-btn active" data-filter="featured">
-          À la Une
+          À la une
         </button>
         <button class="filter-btn" data-filter="all">Tous</button>
         <button class="filter-btn" data-filter="2026">2026</button>
@@ -87,10 +109,9 @@ Auteur :
       <div class="projects-grid">
         <!-- 2026 -->
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2026"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/freebridge.png" alt="Stage Freebridge.fr" />
           <div class="project-info">
@@ -102,6 +123,7 @@ Auteur :
             <a
               href="https://www.freebridge.fr"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir le site</a
@@ -109,6 +131,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/Freebridge"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -118,14 +141,15 @@ Auteur :
         <div class="project-card" data-year="2026" data-featured="true">
           <img src="img/tcg-pokemon.avif" alt="TCG Pokémon" />
           <div class="project-info">
-            <h3>TCG Pokémon (Node.Js/Vue.Js)</h3>
+            <h3>TCG Pokémon (Node.js/Vue.js)</h3>
             <p class="project-desc">
-              Conception d’un jeu de cartes Pokémon avec un backend Node.Js
-              (API) et un frontend sous Vue.Js. (SPA)
+              Conception d’un jeu de cartes Pokémon avec un backend Node.js
+              (API) et un frontend sous Vue.js (SPA).
             </p>
             <a
               href="https://github.com/Osiris-Sio/TCG-API-Pokemon"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Projet API</a
@@ -133,6 +157,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/tcg-spa-Louis-Amedro"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Projet SPA</a
             >
@@ -146,11 +171,12 @@ Auteur :
             <p class="project-desc">
               Conception d’un site web (PHP) permettant de réaliser des
               prédictions sur des données Valorant (PostgreSQL), en équipe de 3.
-              Ces deux parties sont liées à une API (Node.Js).
+              Ces deux parties sont liées à une API (Node.js).
             </p>
             <a
               href="https://sae-devapigrp6.jrcan.dev/"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir le site</a
@@ -158,6 +184,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/SAE-Web-API_03-2026/tree/master"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -165,10 +192,9 @@ Auteur :
         </div>
 
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2026"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/site-osirissio.png" alt="Site Personnel" />
           <div class="project-info">
@@ -181,6 +207,7 @@ Auteur :
             <a
               href="https://osiris-sio.fr/"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir le site</a
@@ -188,6 +215,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/osiris-sio.fr"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -207,6 +235,7 @@ Auteur :
             <a
               href="https://osiris-sio.itch.io/ball-challenge"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir sur Itch.io</a
@@ -214,6 +243,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/Ball-Challenge"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -222,10 +252,9 @@ Auteur :
 
         <!-- 2025 -->
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2025"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/sae-sockets.png" alt="SAE Sockets" />
           <div class="project-info">
@@ -237,6 +266,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/SAE-Sockets_12-2025"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -244,22 +274,22 @@ Auteur :
         </div>
 
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2025"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/sae-algo-graphes.png" alt="SAE IHM" />
           <div class="project-info">
             <h3>SAE IHM (Python)</h3>
             <p class="project-desc">
               Conception d’une application PyQt permettant de positionner les
-              articles sur un plan de magasin et d’en tracer un chemin le plus
+              articles sur un plan de magasin et d’en tracer le chemin le plus
               court pour collecter les produits d’une liste.
             </p>
             <a
               href="https://github.com/Osiris-Sio/SAE_S2-Algo_graphes"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -267,10 +297,9 @@ Auteur :
         </div>
 
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2025"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/undercave.png" alt="UnderCave" />
           <div class="project-info">
@@ -283,6 +312,7 @@ Auteur :
             <a
               href="https://osiris-sio.itch.io/undercave"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir sur Itch.io</a
@@ -290,6 +320,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/UnderCave"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -297,21 +328,21 @@ Auteur :
         </div>
 
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2025"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/sae-web-html.png" alt="SAE Web" />
           <div class="project-info">
             <h3>SAE Web (HTML/CSS)</h3>
             <p class="project-desc">
               Conception d’un site web statique sur l’escrime française aux Jeux
-              Olympiques 2024, en équipe de 4.
+              olympiques 2024, en équipe de 4.
             </p>
             <a
               href="https://projets.jrcan.dev/sabre-olympique/"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir le site</a
@@ -319,6 +350,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/SAE-Web_01-2025"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -336,6 +368,7 @@ Auteur :
             <a
               href="https://osiris-sio.itch.io/lost-in-melody"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur Itch.io</a
             >
@@ -355,6 +388,7 @@ Auteur :
             <a
               href="https://osiris-sio.itch.io/medieval-heroes"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               style="margin-bottom: 10px"
               >Voir sur Itch.io</a
@@ -362,6 +396,7 @@ Auteur :
             <a
               href="https://github.com/Osiris-Sio/Medieval_Heroes"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur GitHub</a
             >
@@ -369,22 +404,22 @@ Auteur :
         </div>
 
         <div
-          class="project-card"
+          class="project-card is-hidden"
           data-year="2024"
           data-featured="false"
-          style="display: none; opacity: 0; transform: scale(0.9)"
         >
           <img src="img/fm1.png" alt="Fast Maze" />
           <div class="project-info">
             <h3>Fast Maze (Python)</h3>
             <p class="project-desc">
               Plongez dans l'excitation de l'aventure avec Fast Maze, un jeu
-              captivant où votre réflexion est honorée dans un petit labyrinthe
-              !
+              captivant où votre logique et votre réflexion sont mises à rude
+              épreuve dans un petit labyrinthe !
             </p>
             <a
               href="https://osiris-sio.itch.io/fast-maze"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur Itch.io</a
             >
@@ -397,13 +432,14 @@ Auteur :
             <h3>Mini Zone Wars OG</h3>
             <p class="project-desc">
               🔫 Armes du Chapitre 1 <br />
-              🗺️ Mini carte du Chapitre 1 <br />
+              🗺️ Mini-carte du Chapitre 1 <br />
               ❌ Anti-tryharder <br />
               🏆 Tout le monde peut gagner !
             </p>
             <a
               href="https://www.fortnite.com/@osiris_sio/5607-8026-1373?lang=fr"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Jouer sur Fortnite</a
             >
@@ -422,6 +458,7 @@ Auteur :
             <a
               href="https://osiris-sio.itch.io/shooting-crab"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-project"
               >Voir sur Itch.io</a
             >

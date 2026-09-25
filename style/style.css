@@ -16,6 +16,7 @@ Auteur :
   --jaune-clair: #fffa8c;
   --jaune: #ffd100;
   --noir: #000000;
+  --font-nunito: 'Nunito', sans-serif;
   --transition: 0.3s ease-in-out;
 }
 
@@ -27,10 +28,10 @@ body {
   color: var(--blanc);
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-nunito);
   font-style: normal;
   margin: 70px 0 0 0;
-  min-height: 92vh;
+  min-height: 100vh;
   padding: 0;
   text-align: center;
 }
@@ -51,6 +52,7 @@ article a:hover {
   text-decoration: underline;
 }
 
+article h1,
 article h2 {
   background-color: var(--gris);
   border-radius: 12px;
@@ -70,10 +72,14 @@ iframe {
   width: 30%;
 }
 
-article img:hover,
-iframe:hover {
+article img:hover {
   border-color: var(--blanc);
   cursor: pointer;
+  transform: scale(1.03);
+}
+
+iframe:hover {
+  border-color: var(--blanc);
   transform: scale(1.03);
 }
 
@@ -164,6 +170,7 @@ img.contour-bleu:hover {
 }
 
 @media (max-width: 870px) {
+  article h1,
   article h2 {
     font-size: 22px;
   }
@@ -186,8 +193,8 @@ img.contour-bleu:hover {
 
   /* Réseaux */
   article .reseaux div {
-    display: contents;
-    margin: 0px 100px;
+    flex-direction: column;
+    margin: 20px auto;
   }
 
   article .reseaux div img {

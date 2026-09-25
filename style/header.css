@@ -74,11 +74,13 @@ header {
   width: 0%;
 }
 
-.nav-liens li a:hover {
+.nav-liens li a:hover,
+.nav-liens li a.actif {
   color: #fff;
 }
 
-.nav-liens li a:hover::after {
+.nav-liens li a:hover::after,
+.nav-liens li a.actif::after {
   width: 100%;
 }
 

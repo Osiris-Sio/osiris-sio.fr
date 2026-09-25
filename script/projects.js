@@ -27,19 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             filterValue === 'featured' &&
             card.getAttribute('data-featured') === 'true';
 
-          if (filterValue === 'all' || matchYear || matchFeatured) {
-            card.style.display = 'flex';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'scale(1)';
-            }, 50);
-          } else {
-            card.style.opacity = '0';
-            card.style.transform = 'scale(0.9)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300); // 300ms correspond à la transition CSS
-          }
+          const isVisible = filterValue === 'all' || matchYear || matchFeatured;
+          card.classList.toggle('is-hidden', !isVisible);
         });
       });
     });

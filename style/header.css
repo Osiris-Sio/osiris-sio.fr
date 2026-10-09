@@ -36,15 +36,15 @@ header {
 }
 
 .main-nav {
-  max-width: 40em;
+  max-width: 52em;
 }
 
 .nav-liens {
   display: flex;
-  gap: 2em;
+  gap: 1.6em;
   justify-content: center;
   list-style: none;
-  margin: 0 3em;
+  margin: 0 1.5em;
   padding: 0;
 }
 
@@ -381,15 +381,6 @@ body.menu-open #scrollTopBtn {
   body.menu-open .menu-backdrop {
     opacity: 1;
     pointer-events: auto;
-  }
-
-  /* Désactiver les hovers sur mobile */
-  .nav-liens li a:hover {
-    color: var(--jaune);
-  }
-
-  .nav-liens li a:hover::after {
-    width: 0%;
   }
 
   .dropdown-menu li a:hover {

@@ -161,3 +161,14 @@ function copierEmail() {
     fallbackCopierEmail(adresseEmail);
   }
 }
+
+// Enregistrement du Service Worker (PWA)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('sw.js')
+      .catch((err) =>
+        console.warn('Échec enregistrement Service Worker:', err)
+      );
+  });
+}

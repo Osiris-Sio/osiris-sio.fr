@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio - Osiris Sio",
+  "short_name": "Portfolio",
+  "description": "Développeur et créateur de contenu passionné par l'univers du jeu vidéo et la programmation.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#23272a",
+  "theme_color": "#001a46",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

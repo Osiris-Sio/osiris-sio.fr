@@ -26,6 +26,7 @@ const ASSETS_TO_CACHE = [
   './script/script.js',
   './script/projects.js',
   './img/logo.png',
+  './img/icon-pwa.png',
   './manifest.json'
 ];
 

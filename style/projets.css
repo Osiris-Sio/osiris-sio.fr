@@ -81,6 +81,17 @@ Auteur :
   padding: 1em;
 }
 
+.project-badge {
+  background-color: var(--bleu-fonce);
+  border: 3px solid var(--jaune);
+  border-radius: 20px;
+  color: var(--jaune);
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.8em;
+  padding: 0.3em 0.9em;
+}
+
 .project-info .project-desc {
   border-left: none; /* Annule le style global des paragraphes */
   color: var(--blanc);

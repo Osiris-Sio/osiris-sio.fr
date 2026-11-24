@@ -176,77 +176,11 @@ header {
 }
 
 /* Masquer la flèche quand le menu burger est ouvert */
-.main-nav.open ~ #scrollTopBtn,
-.burger.open ~ #scrollTopBtn,
-body.menu-open #scrollTopBtn {
+.main-nav.open ~ #fleche-haut,
+.burger.open ~ #fleche-haut,
+body.menu-open #fleche-haut {
   opacity: 0 !important;
   pointer-events: none !important;
-}
-
-/* ----- Menu Déroulant ----- */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  background: linear-gradient(
-    180deg,
-    var(--bleu-fonce) 0%,
-    var(--bleu-clair) 100%
-  );
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none;
-  left: 0;
-  list-style: none;
-  margin: 0;
-  min-width: 150px;
-  padding: 0.5em 0;
-  position: absolute;
-  top: 100%;
-  z-index: 1000;
-}
-
-@media (min-width: 881px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .dropdown:hover .arrow {
-    transform: rotate(180deg);
-  }
-}
-
-.arrow {
-  display: inline-block;
-  font-size: 0.8em;
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.dropdown.open .arrow {
-  transform: rotate(180deg);
-}
-
-.dropdown-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-.dropdown-menu li a {
-  border-radius: 0;
-  color: var(--blanc);
-  display: block;
-  font-size: 1.1em;
-  padding: 0.5em 1em;
-}
-
-.dropdown-menu li a::after {
-  display: none;
-}
-
-.dropdown-menu li a:hover {
-  background: var(--bleu-clair);
-  color: var(--jaune);
 }
 
 /* ----- Responsive ----- */
@@ -310,26 +244,6 @@ body.menu-open #scrollTopBtn {
     text-align: left;
   }
 
-  .dropdown-menu {
-    background: transparent;
-    box-shadow: none;
-    display: none;
-    margin-top: 0.5em;
-    padding-left: 1.5em;
-    position: relative;
-    right: 0;
-    top: 0;
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu li a {
-    font-size: 1.3em;
-    padding: 0.3em 0;
-  }
-
   .burger {
     background: var(--bleu-fonce);
     border-radius: 30%;
@@ -341,19 +255,6 @@ body.menu-open #scrollTopBtn {
     right: 1.5em;
     top: 1.5em;
     z-index: 1200;
-  }
-
-  #scrollTopBtn {
-    background: var(--bleu-fonce);
-    border-radius: 50%;
-    border: 3px solid var(--jaune);
-    bottom: 0.5em;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    color: var(--jaune);
-    font-size: 1.5em;
-    height: 48px;
-    right: 0.2em;
-    width: 48px;
   }
 
   #fleche-haut {
@@ -382,14 +283,9 @@ body.menu-open #scrollTopBtn {
     opacity: 1;
     pointer-events: auto;
   }
-
-  .dropdown-menu li a:hover {
-    background: transparent;
-    color: var(--blanc);
-  }
 }
 
-@media (min-width: 881px) {
+@media (min-width: 751px) {
   .menu-backdrop {
     display: none;
   }
